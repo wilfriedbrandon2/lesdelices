@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Les Délices de Barbie — Boutique</title>
+  <meta name="description" content="Les Délices de Barbie — Boutique de pâtisseries et douceurs. Commandez facilement et recevez votre commande par WhatsApp." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">
+          <div class="logo">LB</div>
+          <h1>Les Délices de Barbie</h1>
+        </div>
+        <div class="nav-actions">
+          <button class="btn outline" id="btnAdmin">Admin</button>
+          <button class="btn primary" id="btnCart">🛒 Panier <span id="cartCount" class="chip">0</span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:32px 16px 24px">
+      <div>
+        <h2>Douceurs artisanales, fraîches chaque jour 🍰</h2>
+        <p>Découvrez nos gâteaux, cupcakes, viennoiseries et boissons. Commandez en ligne, recevez la confirmation directement sur WhatsApp.</p>
+        <div style="display:flex;gap:10px;margin-top:8px">
+          <a href="#shop" class="btn primary">Voir la boutique</a>
+          <a href="#contact" class="btn outline">Nous contacter</a>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <main class="wrap" id="shop" style="padding:16px">
+    <h2 style="margin:16px 0 8px">Nos produits</h2>
+    <p class="muted" style="margin:0 0 12px">Ajoutez au panier et validez la commande via WhatsApp.</p>
+    <div id="productGrid" class="grid"></div>
+  </main>
+
+  <!-- Cart Drawer -->
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <header>
+      <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:60px">
+        <strong>Votre panier</strong>
+        <button class="btn outline" id="closeDrawer">Fermer</button>
+      </div>
+    </header>
+    <div class="content">
+      <div id="cartLines" style="display:grid;gap:10px"></div>
+      <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+        <span class="muted">Total:</span>
+        <strong id="cartTotal">0 FCFA</strong>
+      </div>
+      <hr/>
+      <h4>Infos de livraison</h4>
+      <div class="form-row">
+        <div>
+          <label>Nom complet</label>
+          <input id="fullName" placeholder="Ex: Sandra N.">
+        </div>
+        <div>
+          <label>Téléphone</label>
+          <input id="phone" placeholder="Ex: 6xx xx xx xx" />
+        </div>
+      </div>
+      <label>Adresse</label>
+      <input id="address" placeholder="Quartier, rue, indication…">
+      <div class="form-row">
+        <div>
+          <label>Ville</label>
+          <input id="city" placeholder="Douala">
+        </div>
+        <div>
+          <label>Mode</label>
+          <select id="mode">
+            <option value="Retrait boutique">Retrait boutique</option>
+            <option value="Livraison">Livraison</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <button class="btn primary" id="btnCheckout">📩 Commander via WhatsApp</button>
+      <small class="muted">Le message s’ouvre dans WhatsApp pour confirmation.</small>
+    </footer>
+  </aside>
+
+  <!-- Admin Modal (with password) -->
+  <div id="adminModal" class="modal" aria-hidden="true">
+    <div class="sheet">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3>Admin — Gestion de produits</h3>
+        <button class="btn outline" id="closeAdmin">Fermer</button>
+      </div>
+
+      <div id="adminLogin">
+        <p class="muted">Entrez le mot de passe</p>
+        <div class="form-row">
+          <input type="password" id="adminPass" placeholder="Mot de passe" />
+          <button class="btn primary" id="adminEnter">Entrer</button>
+        </div>
+      </div>
+
+      <div id="adminPanel" class="hidden">
+        <h4>Ajouter / Modifier un produit</h4>
+        <form id="productForm" style="display:grid;gap:10px">
+          <div class="form-row">
+            <div>
+              <label>Nom</label>
+              <input id="pName" required />
+            </div>
+            <div>
+              <label>Prix (FCFA)</label>
+              <input id="pPrice" type="number" min="0" step="50" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label>Catégorie</label>
+              <input id="pCat" placeholder="Ex: Gâteaux, Boissons" />
+            </div>
+            <div>
+              <label>Image (URL)</label>
+              <input id="pImg" placeholder="https://…" />
+            </div>
+          </div>
+          <div>
+            <label>Description</label>
+            <textarea id="pDesc" rows="2" placeholder="Court descriptif"></textarea>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn primary" type="submit">Enregistrer</button>
+            <button class="btn outline" type="button" id="resetForm">Réinitialiser</button>
+          </div>
+          <input type="hidden" id="editIndex" value="" />
+        </form>
+
+        <h4 style="margin-top:20px">Produits</h4>
+        <div id="adminList" style="display:grid;gap:8px"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h3 style="margin-top:0">Les Délices de Barbie</h3>
+          <p>Douceurs faites maison à Douala. Qualité, fraîcheur et sourire dans chaque bouchée.</p>
+          <p><a href="tel:+237653154864">📞 +237 653 154 864</a><br><a href="mailto:contact@lesdelicesdebarbie.cm">✉️ contact@lesdelicesdebarbie.cm</a></p>
+        </div>
+        <div>
+          <h4>Horaires</h4>
+          <p>Lun–Sam: 08h–19h<br>Dim: 10h–17h</p>
+          <p class="muted">Bon à savoir : commandes personnalisées 24–48h à l’avance.</p>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <p class="muted">Recevez nos nouveautés et promos.</p>
+          <form id="newsletterForm" class="newsletter">
+            <input type="email" id="nlEmail" placeholder="Votre email" required />
+            <button class="btn primary" type="submit">S'inscrire</button>
+          </form>
+          <small id="nlMsg" class="muted"></small>
+        </div>
+      </div>
+      <div style="border-top:1px solid #222;padding:12px 0;text-align:center;color:#9ca3af">© <span id="year"></span> Les Délices de Barbie • Tous droits réservés.</div>
+    </div>
+  </footer>
+
+  <script>
+    // ====== Données & utilitaires ======
+    const WHATSAPP_NUMBER = "237653154864"; // Votre numéro sans +
+    const CURRENCY = "FCFA";
+    const STORAGE_KEY_PRODUCTS = "ldb_products_v1";
+    const STORAGE_KEY_CART = "ldb_cart_v1";
+
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+    function formatPrice(v){
+      const n = Number(v||0);
+      return new Intl.NumberFormat('fr-FR').format(n) + ' ' + CURRENCY;
+    }
+
+    function loadProducts(){
+      const raw = localStorage.getItem(STORAGE_KEY_PRODUCTS);
+      if(raw){
+        try { return JSON.parse(raw); } catch(e){ console.warn('Parse products', e) }
+      }
+      // Démo initiale si vide
+      const demo = [
+        {name:'Fraisiers individuels',
+         price: 1500, cat:'Gâteaux',
+         img:'product-4.jpg',
+         desc:'Génoise légère, crème mousseline, fraises fraîches.'
+        },
+        {name:'Cupcake vanille',
+         price: 800, cat:'Cupcakes',
+          img:'product-4.jpg'},
+        {name:'Croissant beurre', price: 400, cat:'Viennoiserie', img:'https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1200&auto=format&fit=crop', desc:'Feuilletage croustillant pur beurre.'},
+        {name:'Tarte au citron', price: 2000, cat:'Tartes', img:'https://images.unsplash.com/photo-1601972599720-b0c4b5471e04?q=80&w=1200&auto=format&fit=crop', desc:'Crème citron maison, meringue dorée.'},
+        {name:'Brownie chocolat', price: 1000, cat:'Classiques', img:'https://images.unsplash.com/photo-1606313564200-e75d5e30476e?q=80&w=1200&auto=format&fit=crop', desc:'Ultra fondant 72% cacao.'},
+        {name:'Jus naturel ananas', price: 700, cat:'Boissons', img:'https://images.unsplash.com/photo-1556679343-c7306c47b87b?q=80&w=1200&auto=format&fit=crop', desc:'Pressé du jour, sans sucre ajouté.'}
+      ];
+      localStorage.setItem(STORAGE_KEY_PRODUCTS, JSON.stringify(demo));
+      return demo;
+    }
+
+    function saveProducts(arr){ localStorage.setItem(STORAGE_KEY_PRODUCTS, JSON.stringify(arr)); }
+
+    // ====== Rendu boutique ======
+    let PRODUCTS = loadProducts();
+    let CART = JSON.parse(localStorage.getItem(STORAGE_KEY_CART) || '[]');
+
+    function renderGrid(){
+      const grid = $('#productGrid');
+      grid.innerHTML = '';
+      PRODUCTS.forEach((p, idx) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${p.img || 'https://placehold.co/600x400?text=Les+Delices'}" alt="${p.name}" loading="lazy"/>
+          <div class="card-body">
+            <div style="display:flex;align-items:center;flex-direction:column;gap:8px">
+              <strong>${p.name}</strong>
+              <span class="chip">${p.cat || 'Divers'}</span>
+            </div>
+            <div class="muted" style="min-height:35px">${p.desc || ''}</div>
+            <div style="display:flex;align-items:center;flex-direction:column;">
+              <span class="price">${formatPrice(p.price)}</span>
+              <button class="btn primary" data-add="${idx}" style="width:100%">Ajouter</button>
+            </div>
+          </div>`;
+        grid.appendChild(card);
+      });
+    }
+
+    function saveCart(){ localStorage.setItem(STORAGE_KEY_CART, JSON.stringify(CART)); }
+    function cartCount(){ return CART.reduce((a,l)=>a + (l.qty||1), 0); }
+
+    function renderCart(){
+      $('#cartLines').innerHTML = '';
+      let total = 0;
+      CART.forEach((line, i) => {
+        const sum = (line.qty||1) * Number(line.price||0);
+        total += sum;
+        const row = document.createElement('div');
+        row.className='line';
+        row.innerHTML = `
+          <div style="flex:1">
+            <strong>${line.name}</strong><br>
+            <small class="muted">${formatPrice(line.price)} x </small>
+            <input type="number" min="1" value="${line.qty||1}" data-qty="${i}" style="width:64px"/>
+          </div>
+          <div>
+            <div style="text-align:right">${formatPrice(sum)}</div>
+            <button class="btn outline" data-del="${i}" style="margin-top:6px">Supprimer</button>
+          </div>`;
+        $('#cartLines').appendChild(row);
+      });
+      $('#cartTotal').textContent = formatPrice(total);
+      $('#cartCount').textContent = cartCount();
+    }
+
+    // Ajout au panier
+    document.addEventListener('click', (e) => {
+      const add = e.target.closest('[data-add]');
+      if(add){
+        const idx = Number(add.getAttribute('data-add'));
+        const p = PRODUCTS[idx];
+        const existing = CART.find(l => l.name === p.name && l.price === p.price);
+        if(existing){ existing.qty = (existing.qty||1) + 1; }
+        else { CART.push({ name:p.name, price:p.price, qty:1 }); }
+        saveCart();
+        renderCart();
+        $('#drawer').classList.add('open');
+      }
+      const del = e.target.closest('[data-del]');
+      if(del){
+        const i = Number(del.getAttribute('data-del'));
+        CART.splice(i,1);
+        saveCart();
+        renderCart();
+      }
+    });
+
+    // Changement de quantité
+    document.addEventListener('input', (e) => {
+      const qty = e.target.closest('[data-qty]');
+      if(qty){
+        const i = Number(qty.getAttribute('data-qty'));
+        const v = Math.max(1, Number(qty.value||1));
+        CART[i].qty = v;
+        saveCart();
+        renderCart();
+      }
+    });
+
+    // ====== Drawer actions ======
+    $('#btnCart').addEventListener('click', ()=> $('#drawer').classList.add('open'));
+    $('#closeDrawer').addEventListener('click', ()=> $('#drawer').classList.remove('open'));
+
+    // ====== Checkout via WhatsApp ======
+    $('#btnCheckout').addEventListener('click', () => {
+      if(CART.length === 0){ alert('Votre panier est vide.'); return; }
+      const fullName = $('#fullName').value.trim();
+      const phone = $('#phone').value.trim();
+      const address = $('#address').value.trim();
+      const city = $('#city').value.trim();
+      const mode = $('#mode').value;
+      if(!fullName || !phone){ alert('Veuillez renseigner votre nom et téléphone.'); return; }
+
+      let msg = `Bonjour, nouvelle commande Les Délices de Barbie%0A`;
+      msg += `👤 ${fullName}%0A📞 ${phone}%0A🏠 ${address ? address+', ' : ''}${city}%0A🚚 ${mode}%0A%0A`;
+      msg += `🛍️ Détails:%0A`;
+      let total=0;
+      CART.forEach(l => { const s=(l.qty||1)*Number(l.price||0); total+=s; msg += `- ${l.name} x${l.qty||1} = ${s} ${CURRENCY}%0A`; });
+      msg += `%0A💰 Total: ${total} ${CURRENCY}`;
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+      window.open(url, '_blank');
+    });
+
+    // ====== Admin ======
+    const adminModal = $('#adminModal');
+    $('#btnAdmin').addEventListener('click', ()=> adminModal.classList.add('open'));
+    $('#closeAdmin').addEventListener('click', ()=> adminModal.classList.remove('open'));
+
+    $('#adminEnter').addEventListener('click', ()=>{
+      const pass = $('#adminPass').value;
+      if(pass === (localStorage.getItem('ldb_admin_pass') || 'barbie2025')){
+        $('#adminLogin').classList.add('hidden');
+        $('#adminPanel').classList.remove('hidden');
+        renderAdminList();
+      } else alert('Mot de passe incorrect');
+    });
+
+    function renderAdminList(){
+      const list = $('#adminList');
+      list.innerHTML = '';
+      PRODUCTS.forEach((p, i) => {
+        const row = document.createElement('div');
+        row.className='line';
+        row.innerHTML = `
+          <div style="flex:1">
+            <strong>${p.name}</strong> <small class="muted">${p.cat||''}</small><br>
+            <small>${formatPrice(p.price)}</small>
+          </div>
+          <div>
+            <button class="btn outline" data-edit="${i}">Éditer</button>
+            <button class="btn primary" data-remove="${i}" style="background:#ef4444">Suppr.</button>
+          </div>`;
+        list.appendChild(row);
+      });
+    }
+
+    // Ajouter/éditer produit
+    $('#productForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = {
+        name: $('#pName').value.trim(),
+        price: Number($('#pPrice').value||0),
+        cat: $('#pCat').value.trim(),
+        img: $('#pImg').value.trim(),
+        desc: $('#pDesc').value.trim(),
+      }
+      const idx = $('#editIndex').value;
+      if(idx){ PRODUCTS[Number(idx)] = data; }
+      else { PRODUCTS.push(data); }
+      saveProducts(PRODUCTS);
+      renderGrid();
+      renderAdminList();
+      e.target.reset();
+      $('#editIndex').value='';
+    });
+
+    $('#resetForm').addEventListener('click', ()=>{ $('#productForm').reset(); $('#editIndex').value=''; });
+
+    document.addEventListener('click', (e)=>{
+      const edit = e.target.closest('[data-edit]');
+      if(edit){
+        const i = Number(edit.getAttribute('data-edit'));
+        const p = PRODUCTS[i];
+        $('#pName').value = p.name||'';
+        $('#pPrice').value = p.price||0;
+        $('#pCat').value = p.cat||'';
+        $('#pImg').value = p.img||'';
+        $('#pDesc').value = p.desc||'';
+        $('#editIndex').value = String(i);
+        window.scrollTo({top:0,behavior:'smooth'});
+      }
+      const rem = e.target.closest('[data-remove]');
+      if(rem){
+        const i = Number(rem.getAttribute('data-remove'));
+        if(confirm('Supprimer ce produit ?')){
+          PRODUCTS.splice(i,1);
+          saveProducts(PRODUCTS);
+          renderGrid();
+          renderAdminList();
+        }
+      }
+    });
+
+    // ====== Newsletter (Web3Forms, sans redirection) ======
+    // Uses your provided Web3Forms key and fetch() to avoid redirect
+    const WEB3FORMS_KEY = 'e159c8a7-af37-457f-a38e-cdcf0cb14a93';
+    $('#newsletterForm').addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const email = $('#nlEmail').value.trim();
+      if(!email) return;
+      $('#nlMsg').textContent = 'Envoi en cours…';
+      try{
+        const formData = new FormData();
+        formData.append('access_key', WEB3FORMS_KEY);
+        formData.append('subject', 'Nouvelle inscription newsletter — Les Délices de Barbie');
+        formData.append('email', email);
+        formData.append('from_name', 'Les Délices de Barbie');
+        formData.append('message', `Newsletter signup: ${email}`);
+
+        const r = await fetch('https://api.web3forms.com/submit', { method:'POST', body: formData });
+        const data = await r.json();
+        if(data.success){
+          $('#nlMsg').textContent = 'Merci ! Vous êtes inscrit(e).';
+          e.target.reset();
+        } else {
+          $('#nlMsg').textContent = 'Échec de l’inscription. Réessayez plus tard.';
+        }
+      }catch(err){
+        $('#nlMsg').textContent = 'Erreur réseau. Réessayez.';
+      }
+    });
+
+    // ====== Init ======
+    renderGrid();
+    renderCart();
+    $('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
