@@ -319,6 +319,7 @@ input:focus,select:focus,textarea:focus{ outline:2px solid var(--ring); border-c
     }
     .cnn select{
       width: 100%;
+      padding: 15px;
       border: 1px solid var(--primary);
     }
     .cnn textarea{
