@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Les Délices de Barbie — Boutique</title>
-  <meta name="description" content="Les Délices de Barbie — pâtisseries artisanales. Commandez et confirmez via WhatsApp." />
+  <meta name="description" content="Les Délices de Barbie — Pâtisseries artisanales à Douala. Commandez en ligne et recevez la confirmation via WhatsApp." />
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,63 +13,91 @@
   <header class="site-header">
     <div class="wrap">
       <nav class="nav">
-        <a class="brand" href="#top" aria-label="Accueil Les Délices de Barbie">
+        <div class="brand">
           <div class="logo">LB</div>
           <h1>Les Délices de Barbie</h1>
-        </a>
+        </div>
         <div class="nav-actions">
-          <button class="btn primary" id="btnCart">
-            🛒 Panier <span id="cartCount" class="chip">0</span>
-          </button>
+          <button class="btn primary" id="btnCart">🛒 Panier <span id="cartCount" class="chip">0</span></button>
         </div>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero" id="top">
-    <div class="wrap hero-wrap">
-      <div class="hero-text">
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
         <h2>Douceurs artisanales, fraîches chaque jour 🍰</h2>
-        <p>Découvrez nos gâteaux, cupcakes, viennoiseries et boissons. Ajoutez au panier et validez la commande via WhatsApp.</p>
-        <div class="hero-ctas">
+        <p>Gâteaux, cupcakes, viennoiseries et boissons. Ajoutez au panier et finalisez sur WhatsApp.</p>
+        <div class="hero-cta">
           <a href="#shop" class="btn primary">Voir la boutique</a>
           <a href="#contact" class="btn outline">Nous contacter</a>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true"></div>
+      <!-- <div class="hero-illus" aria-hidden="true"></div> -->
     </div>
   </section>
 
   <!-- Products -->
-  <main class="wrap" id="shop">
+  <main id="shop" class="wrap section">
+    <div class="toolbar">
+      <div class="categories" id="catSlider" aria-label="Catégories"></div>
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Rechercher un produit…" aria-label="Rechercher" />
+      </div>
+    </div>
+
     <h2 class="section-title">Nos produits</h2>
-    <p class="muted section-sub">Ajoutez au panier et validez la commande via WhatsApp.</p>
+    <p class="muted">Ajoutez au panier et validez la commande via WhatsApp.</p>
+
     <div id="productGrid" class="grid"></div>
   </main>
 
+  <!-- Product Details Modal -->
+  <div id="detailsModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Détails du produit">
+    <div class="sheet">
+      <button class="icon-btn close" id="closeDetails" aria-label="Fermer">✕</button>
+      <div class="details-layout">
+        <div class="carousel">
+          <img id="detailImg" alt="" loading="lazy" />
+          <button class="icon-btn prev" id="prevImg" aria-label="Précédent">‹</button>
+          <button class="icon-btn next" id="nextImg" aria-label="Suivant">›</button>
+          <div class="thumbs" id="thumbs"></div>
+        </div>
+        <div class="details">
+          <h3 id="detailName"></h3>
+          <div class="detail-meta">
+            <span id="detailCat" class="chip"></span>
+            <strong id="detailPrice" class="price"></strong>
+          </div>
+          <p id="detailDesc"></p>
+          <button class="btn primary" id="detailAdd">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Cart Drawer -->
   <aside id="drawer" class="drawer" aria-hidden="true">
-    <header class="drawer-head">
-      <div class="wrap drawer-head-inner">
+    <header class="drawer-header">
+      <div class="wrap drawer-bar">
         <strong>Votre panier</strong>
         <button class="btn outline" id="closeDrawer">Fermer</button>
       </div>
     </header>
     <div class="content">
       <div id="cartLines" class="cart-lines"></div>
-
       <div class="cart-total">
         <span class="muted">Total:</span>
         <strong id="cartTotal">0 FCFA</strong>
       </div>
-
-      <hr />
+      <hr/>
       <h4>Infos de livraison</h4>
       <div class="form-row">
         <div>
           <label>Nom complet</label>
-          <input id="fullName" placeholder="Ex: Sandra N." />
+          <input id="fullName" placeholder="Ex: Sandra N.">
         </div>
         <div>
           <label>Téléphone</label>
@@ -77,11 +105,11 @@
         </div>
       </div>
       <label>Adresse</label>
-      <input id="address" placeholder="Quartier, rue, indication…" />
+      <input id="address" placeholder="Quartier, rue, indication…">
       <div class="form-row">
         <div>
           <label>Ville</label>
-          <input id="city" placeholder="Douala" />
+          <input id="city" placeholder="Douala">
         </div>
         <div>
           <label>Mode</label>
@@ -92,45 +120,65 @@
         </div>
       </div>
     </div>
-    <footer class="drawer-foot">
+    <footer class="drawer-footer">
       <button class="btn primary" id="btnCheckout">📩 Commander via WhatsApp</button>
       <small class="muted">Le message s’ouvre dans WhatsApp pour confirmation.</small>
     </footer>
   </aside>
 
   <!-- Footer -->
-  <footer id="contact" class="site-footer">
-    <div class="wrap">
-      <div class="cols">
-        <div>
-          <h3 class="m0">Les Délices de Barbie</h3>
-          <p>Douceurs faites maison à Douala. Qualité, fraîcheur et sourire dans chaque bouchée.</p>
-          <p>
-            <a href="tel:+237653154864">📞 +237 653 154 864</a><br />
-            <a href="mailto:contact@lesdelicesdebarbie.cm">✉️ contact@lesdelicesdebarbie.cm</a>
-          </p>
-        </div>
-        <div>
-          <h4>Horaires</h4>
-          <p>Lun–Sam: 08h–19h<br />Dim: 10h–17h</p>
-          <p class="muted">Bon à savoir : commandes personnalisées 24–48h à l’avance.</p>
-        </div>
-        <div>
-          <h4>Newsletter</h4>
-          <p class="muted">Recevez nos nouveautés et promos.</p>
-          <form id="newsletterForm" class="newsletter">
-            <input type="email" id="nlEmail" placeholder="Votre email" required />
-            <button class="btn primary" type="submit">S'inscrire</button>
-          </form>
-          <small id="nlMsg" class="muted"></small>
-        </div>
+  <footer id="contact" class="footer">
+    <div class="footer-container">
+      <!-- About -->
+      <div class="footer-col">
+        <h3>🍰 Les Délices de Barbie</h3>
+        <p>
+          Des douceurs artisanales faites maison avec amour.  
+          Gâteaux, viennoiseries et pâtisseries pour vos événements et vos plaisirs quotidiens.
+        </p>
       </div>
-      <div class="copy">
-        © <span id="year"></span> Les Délices de Barbie • Tous droits réservés.
+
+      <!-- Quick Links
+      <div class="footer-col">
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="#shop">Nos Produits</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div> -->
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 Douala, Cameroun</p>
+        <p>📞 <a href="tel:+237653154864" class="footer-link">+237 653 154 864</a></p>
+        <p>📧 <a href="mailto:delicesdebarbie@gmail.com" class="footer-link">delicesdebarbie@gmail.com</a></p>
+        <!-- <div class="socials"> -->
+          <!-- Replace icons with your own SVG/PNG inside /img -->
+          <!-- <a href="#"><img src="img/fb.png" alt="Facebook"></a>
+          <a href="#"><img src="img/ig.png" alt="Instagram"></a>
+          <a href="#"><img src="img/wa.png" alt="WhatsApp"></a> -->
+        <!-- </div> -->
       </div>
+
+      <!-- Newsletter -->
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p class="muted">Recevez nos nouveautés et promos.</p>
+        <form id="newsletterForm" class="newsletter">
+          <input type="email" id="nlEmail" placeholder="Votre email" required />
+          <button class="btn secondary" type="submit">S'inscrire</button>
+        </form>
+        <small id="nlMsg" class="muted"></small>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Les Délices de Barbie — Tous droits réservés.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
