@@ -328,3 +328,18 @@ function closeModal() {
   modal.style.display = "none";
   document.body.style.overflow = "auto"; // restore scrolling
 }
+
+document.getElementById("detailAdd").addEventListener("click", () => {
+  let price, label;
+
+  if (currentProduct.options && currentProduct.options.length > 0) {
+    const select = document.getElementById("optionSelect");
+    price = parseInt(select.value);
+    label = select.options[select.selectedIndex].text.split(" — ")[0]; // just the label
+  } else {
+    price = currentProduct.price;
+    label = null;
+  }
+
+  addToCart(currentProduct, price, label);
+});
