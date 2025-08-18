@@ -308,6 +308,23 @@ input:focus,select:focus,textarea:focus{ outline:2px solid var(--ring); border-c
      text-align: center;
      z-index: 1200; /* 🚀 ensures it stays above images */
     }
+    .cnn{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .cnn input{
+      width: 100%;
+      border: 1px solid var(--primary);
+    }
+    .cnn select{
+      width: 100%;
+      border: 1px solid var(--primary);
+    }
+    .cnn textarea{
+      width: 100%;
+    }
+
 }
 input, select, textarea {
         width: 70%;
