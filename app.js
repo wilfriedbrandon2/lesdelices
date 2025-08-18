@@ -181,18 +181,6 @@ $("#nextImg").addEventListener("click", ()=>{
 $("#closeDetails").addEventListener("click", closeDetails);
 detailsModal.addEventListener("click", (e)=>{ if(e.target === detailsModal) closeDetails(); });
 
-function openModal(product) {
-  const modal = document.getElementById("productModal");
-  modal.style.display = "flex"; // show modal
-  document.body.style.overflow = "hidden"; // prevent background scroll
-}
-
-function closeModal() {
-  const modal = document.getElementById("productModal");
-  modal.style.display = "none";
-  document.body.style.overflow = "auto"; // restore scrolling
-}
-
 // Open details by click (image or eye)
 document.addEventListener("click", (e)=>{
   const open = e.target.closest("[data-open]");
@@ -328,3 +316,15 @@ renderCategories();
 renderGrid();
 renderCart();
 $("#year").textContent = new Date().getFullYear();
+
+function openModal(product) {
+  const modal = document.getElementById("productModal");
+  modal.style.display = "flex"; // show modal
+  document.body.style.overflow = "hidden"; // prevent background scroll
+}
+
+function closeModal() {
+  const modal = document.getElementById("productModal");
+  modal.style.display = "none";
+  document.body.style.overflow = "auto"; // restore scrolling
+}
