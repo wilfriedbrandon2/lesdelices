@@ -51,34 +51,44 @@
     </div>
 
     <h2 class="section-title">Nos produits</h2>
-    <p class="muted">Ajoutez au panier et validez la commande via WhatsApp.</p>
+    <p class="muted" style="margin-left: 15px;margin-right: 10px; margin-bottom: 15px;">Ajoutez au panier et validez la commande via WhatsApp.</p>
 
     <div id="productGrid" class="grid"></div>
   </main>
 
   <!-- Product Details Modal -->
-  <div id="detailsModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Détails du produit">
-    <div class="sheet">
-      <button class="icon-btn close" id="closeDetails" aria-label="Fermer">✕</button>
-      <div class="details-layout">
-        <div class="carousel">
-          <img id="detailImg" alt="" loading="lazy" />
-          <button class="icon-btn prev" id="prevImg" aria-label="Précédent">‹</button>
-          <button class="icon-btn next" id="nextImg" aria-label="Suivant">›</button>
-          <div class="thumbs" id="thumbs"></div>
+  <!-- Product Details Modal -->
+<div id="detailsModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Détails du produit">
+  <div class="sheet">
+    <button class="icon-btn close" id="closeDetails" aria-label="Fermer">✕</button>
+    <div class="details-layout">
+      <div class="carousel">
+        <img id="detailImg" alt="" loading="lazy" />
+        <button class="icon-btn prev" id="prevImg" aria-label="Précédent">‹</button>
+        <button class="icon-btn next" id="nextImg" aria-label="Suivant">›</button>
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+      <div class="details">
+        <h3 id="detailName"></h3>
+        <div class="detail-meta">
+          <span id="detailCat" class="chip"></span>
+          <strong id="detailPrice" class="price"></strong>
         </div>
-        <div class="details">
-          <h3 id="detailName"></h3>
-          <div class="detail-meta">
-            <span id="detailCat" class="chip"></span>
-            <strong id="detailPrice" class="price"></strong>
-          </div>
-          <p id="detailDesc"></p>
-          <button class="btn primary" id="detailAdd">Ajouter au panier</button>
+
+        <!-- ⬇️ INSERT VARIATIONS DROPDOWN HERE -->
+        <div id="variationBox" class="variation-box" style="margin: 10px 0; display: none;">
+          <label for="variationSelect">Options :</label>
+          <select id="variationSelect"></select>
         </div>
+        <!-- ⬆️ END VARIATIONS -->
+
+        <p id="detailDesc"></p>
+        <button class="btn primary" id="detailAdd">Ajouter au panier</button>
       </div>
     </div>
   </div>
+</div>
+
 
   <!-- Cart Drawer -->
   <aside id="drawer" class="drawer" aria-hidden="true">
@@ -184,5 +194,6 @@
   </footer>
 
   <script src="app.js"></script>
+   <div id="toast" class="toast"></div>
 </body>
 </html>
