@@ -246,14 +246,16 @@ function showToast(message) {
 
 // Add to cart from modal
 detailAdd.addEventListener("click", () => {
-  addToCart(currentProduct, variationSelect.value);
+  const qty = parseInt(document.getElementById("detailQty").value) || 1;
+  addToCart(currentProduct, variationSelect.value, qty);
   closeDetailsModal();
 });
+
 
 /* -------------------------------
    Cart
 -------------------------------- */
-function addToCart(p, variationIndex = null) {
+function addToCart(p, variationIndex = null, qty = 1) {
   let price = p.price;
   let label = p.name;
 
@@ -263,12 +265,16 @@ function addToCart(p, variationIndex = null) {
     label = `${p.name} - ${v.label}`;
   }
 
-  cart.push({ name: label, price });
+  // Multiply by quantity
+  const totalPrice = price * qty;
+
+  cart.push({ name: label, price: totalPrice, qty, unitPrice: price });
   renderCart();
 
   // 🔔 Notify
-  showToast(`${label} ajouté au panier 🛒`);
+  showToast(`${qty} × ${label} ajouté au panier 🛒`);
 }
+
 
 
 function renderCart() {
@@ -279,7 +285,7 @@ function renderCart() {
     const line = document.createElement("div");
     line.className = "cart-line";
     line.innerHTML = `
-      <span>${item.name}</span>
+      <span>${item.qty} × ${item.name}</span>
       <strong>${item.price} FCFA</strong>
       <button class="icon-btn remove" aria-label="Retirer">✕</button>
     `;
@@ -292,6 +298,7 @@ function renderCart() {
   cartTotal.textContent = `${total} FCFA`;
   cartCount.textContent = cart.length;
 }
+
 
 /* -------------------------------
    Cart Drawer Toggle
