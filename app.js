@@ -240,7 +240,7 @@ const products = [
     category: "Combo",
     price: 500,
     description: "Cheese Burger -Mini 500f -xl 1000f Supplément frittes de pommes 500f",
-    images:  ["img/burger.jpeg","img/burger1.jpeg","img/burger3.jpeg"],
+    images:  ["img/burger2.jpeg","img/burger.jpeg","img/burger1.jpeg"],
     variations: [
       { label: "Cheese Burger Mini", price: 500 },
        { label: "Cheese Burger Mini Supplément frittes de pommes", price: 1000 },
