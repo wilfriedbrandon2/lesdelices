@@ -455,7 +455,7 @@ btnCheckout.addEventListener("click", () => {
 
   let msg = `📑Nouvelle commande :\n\n`;
   cart.forEach(item => {
-    msg += `- ${item.name} : ${item.price} FCFA\n`;
+    msg += `🧧${item.name} : 💰 ${item.price} FCFA\n`;
   });
   msg += `\nTotal: 💰${cartTotal.textContent}\n\n`;
   msg += `Client: 👤${name}\nTéléphone: 📞${phone}\nAdresse: 🏘️${address}, 📍${city}\nMode: 🚚${mode}`;
