@@ -12,7 +12,7 @@ const products = [
     description: "Bol de crudités avocat 1000f simple 1500f avec œuf dur comcombre oignon et petit pain",
     images: ["img/Bol de crudités.jpeg", "img/Bol de crudités1.jpeg"],
     variations: [
-      { label: "Bol de crudités avocat 1000f simple", price: 0 },
+      { label: "Bol de crudités avocat simple", price: 1000 },
       { label: "+ œuf dur comcombre oignon et petit pain", price: 1500 },
     ]
   },
@@ -37,12 +37,12 @@ const products = [
     description: "Tarif gâteaux Marbre 3000f Orange 2500f Au citron 2500f Chocolat 3000f Noix de coco 3000f Nature 2500f Autre parfum 3mil Les Délices de Barbie Bonne dégustation",
     images: ["img/cake1.jpeg", "img/cake2.jpeg","img/cake1.jpeg"],
     variations: [
-      { label: "gâteaux Nature 2500f", price: 2500 },
-      { label: "gâteaux Au citron 2500f", price: 2500 },
-      { label: "gâteaux a l'Orange 2500f ", price: 2500 },
-      { label: "gâteaux au  Chocolat 3000f ", price: 3000 },
-      { label: "gâteaux au  Noix de coco 3000f", price: 3000 },
-      { label: "gâteaux Autre parfum 3000f", price: 3000 },
+      { label: "gâteaux Nature ", price: 2500 },
+      { label: "gâteaux Au citron ", price: 2500 },
+      { label: "gâteaux a l'Orange  ", price: 2500 },
+      { label: "gâteaux au  Chocolat ", price: 3000 },
+      { label: "gâteaux au  Noix de coco ", price: 3000 },
+      { label: "gâteaux Autre parfum ", price: 3000 },
     ]
   },
   {
@@ -53,9 +53,9 @@ const products = [
     description: "Précuit 150f unité -Cuit 200f unité -Avec fromage 300f unite Schotteggs //Oeuf écossais  -200f unité  Les Délices de Barbie Bonne dégustation",
     images: ["img/pili.jpeg", "img/pili2.jpeg", "img/pili4.jpeg","img/pili3.jpeg","img/pili1.jpeg"],
     variations: [
-      { label: "Pastels Précuit 150f unité", price: 150 },
-      { label: "Pastels Cuit 200f unité", price: 200 },
-      { label: "Pastels Avec fromage 300f unite Schotteggs ", price: 300 },
+      { label: "Pastels Précuit ", price: 150 },
+      { label: "Pastels Cuit  unité", price: 200 },
+      { label: "Pastels Avec fromage Schotteggs ", price: 300 },
     ]
   },
   {
@@ -66,7 +66,7 @@ const products = [
     description: "1 plantain Burger premium 2 crêpes viande hachée fromage 1 crêpe pané 3broiche viande 1 Portion de frites +une boisson au choix Prix 4500f sans boisson 5mil avec une boisson au 5500f avec jus de fruits naturels",
     images: ["img/packtera.jpeg"],
     variations: [
-      { label: "Pack prestige 4500", price: 4500 },
+      { label: "Pack prestige ", price: 4500 },
       { label: "Pack prestige avec une boisson", price: 5000 },
       { label: "Pack prestige avec jus de fruits naturels", price: 5500 }
     ]
@@ -74,10 +74,136 @@ const products = [
   {
     id: 6,
     name: "Mini pizza",
-    category: "Combo",
+    category: "Pizza",
     price: 500,
     description: "Mini pizza 500f unité disponible avec Les Délices de Barbie, Bonne dégustation",
     images: ["img/Minipacker.jpeg"],
+  },
+  {
+    id: 7,
+    name: "Tarif Nems ",
+    category: "Nems",
+    price: 1500,
+    description: "poisson 150f,viande 150f,Feuilles de nems 10_500f,Commande minimum 10pieces",
+    images: ["img/tune.jpeg"],
+    variations: [
+      { label: "Nems poisson 150f x 10", price: 1500 },
+      { label: "Nems viande 150f x 10", price: 1500 },
+      { label: "Feuilles de nems 10_500f", price: 10500 }
+    ]
+  },
+  {
+    id: 8,
+    name: "Tarif crêpes",
+    category: "crêpes",
+    price: 1000,
+    description: "10 crêpes nature 1000f  | 10 crêpes au chocolat 1500f | 10 crêpes au lait 1500f | 10crepes marbré 1500f | supplement chocolat 300f | 1crepes viande hachée fromage 500f | crepe pané 1000f _3 a 2500f | crepe poulet fromage 800f | crepe poulet fromage pané 1200f unité | #Les Délices de Barbie Bonne dégustation",
+    images:  ["img/crepa.jpeg", "img/crepa1.jpeg", "img/crepes.jpeg", "img/crepes choco1.jpeg", "img/crepes choco.jpeg"],
+    variations: [
+      { label: "10 crêpes nature", price: 1000 },
+      { label: "10 crêpes au chocolat ", price: 1500 },
+      { label: "10 crêpes au lait ", price: 1500 },
+      { label: "1crepes viande hachée fromage ", price: 500 },
+      { label: "crepe pané  ", price: 1000 },
+      { label: "crepe pané x 3", price: 2500 },
+      { label: "supplement chocolat ", price: 300 },
+      { label: "crepe poulet fromage ", price: 800 },
+      { label: "crepe poulet fromage pané", price: 1200 }
+    ]
+  },
+  {
+    id: 9,
+    name: "Tarif apéritif",
+    category: "apéritif",
+    price: 1000,
+    description: "Cacahuètes  (avec arachides) 0.5l _1000f,  1l_ 2000f, 1.5l _3000f | Croquettes  (sans arachides) 0.5l _1000f, 1l_2000f, 1.5l _2800f  | Caramel 0.5l _800f, 1l_ 1500f, 1,5l_ 2400f | Coconut sweet 0.5l _1000f,1l_2000f, 1.5l_3000f Bonne dégustation #Les Délices de Barbie",
+    images:  ["img/caramel.jpeg", "img/rocks.jpeg","img/rock2.jpeg"],
+    variations: [
+      { label: "Cacahuètes(avec arachides) 0.5l", price: 1000 },
+      { label: "Cacahuètes(avec arachides) 1l ", price: 2000 },
+      { label: "Cacahuètes(avec arachides) 1.5l ", price: 3000 },
+      { label: "Croquettes (sans arachides) 0.5l", price: 1000 },
+      { label: "Croquettes (sans arachides) 1l ", price: 2000 },
+      { label: "crepe pané x 3", price: 2500 },
+      { label: "Croquettes (sans arachides) 1.5l", price: 2800 },
+      { label: "Caramel 0.5l ", price: 800 },
+      { label: "Caramel 1l", price: 1500 },
+      { label: "Caramel 1.5l", price: 2400 },
+      { label: "Coconut sweet 0.5l", price: 1000 },
+      { label: "Coconut sweet 1l", price: 2000 },
+      { label: "Coconut sweet 1.5l ", price: 3000 }
+    ]
+  },
+  {
+    id: 10,
+    name: " Boisson détox",
+    category: "Boisson",
+    price: 1000,
+    description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande",
+    images:  ["img/baoba.jpeg","img/jusa1.jpeg", "img/jus collection.jpeg","img/jus a2.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
+    variations: [
+      { label: "Boisson détox 0.5l Beca", price: 1000 },
+      { label: "Boisson détox 1l Beca", price: 1800 },
+      { label: "Boisson détox 1.5l Beca  ", price: 3000 },
+      { label: "Boisson détox 0.5l vert", price: 1000 },
+      { label: "Boisson détox 1l vert", price: 1800 },
+      { label: "Boisson détox 1.5l vert  ", price: 3000 }
+    ]
+  },
+  {
+    id: 10,
+    name: " Boisson au lait",
+    category: "Boisson",
+    price: 500,
+    description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande",
+    images:  [ "img/jus collection.jpeg","img/baoba.jpeg","img/jusa1.jpeg","img/jus a2.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
+    variations: [
+      { label: "Menthe au lait 0.5l ", price: 500 },
+      { label: "Menthe au lait 1l", price: 1000 },
+      { label: "Menthe au lait 1.5l  ", price: 1500 },
+      { label: "Baobab au lait 0.5l", price: 700 },
+      { label: "Baobab au lait 1l", price: 1300 }
+    ]
+  },
+  {
+    id: 10,
+    name: " Jus de fruits naturelles ",
+    category: "Boisson",
+    price: 1000,
+    description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande.NB ; les saveurs varie en fonction des saisons ",
+    images:  ["img/jusa1.jpeg", "img/jus collection.jpeg","img/baoba.jpeg","img/jus a2.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
+    variations: [
+      { label: "Cocktail (Ananas pastèque papaye) 0.5l", price: 1000 },
+      { label: "Cocktail (Ananas Cassis) 0.5l", price: 1000 },
+      { label: "Cocktail (Ananas passion) 0.5l", price: 1000 },
+      { label: "jus de ananas 0.5l ", price: 1000 },
+      { label: "Ananas gingembre 0.5l", price: 1000 },
+      { label: "pasteque ananas 0.5l ", price: 1000 },
+      { label: "mangue ananas  0.5l ", price: 1000 },
+      { label: "jus de corosol  0.5l", price: 1000 },
+      { label: "jus de corosol  1l", price: 1500 }
+    ]
+  },
+  {
+    id: 11,
+    name: " Pack salé ",
+    category: "Combo",
+    price: 3500,
+    description: "Premium plantain et cheese  Burger Une mini pizza / une portion de frites  3pastels viande hachée  1boissons au choix (menthe ou baobab au lait  ) Prix 4mil 3500f sans boisson",
+    images:  ["img/Pack salé.jpeg", "img/packyamo.jpeg","img/packyam1.jpeg"],
+    variations: [
+      { label: "Pack salé simple", price: 3500 },
+      { label: "Pack salé + 1boissons (menthe au lait)", price: 4000 },
+      { label: "Pack salé + 1boissons (boabab au lait)", price: 4000 }
+    ]
+  },
+  {
+    id: 12,
+    name: " Pack anniversaire  ",
+    category: "Combo",
+    price: 12000,
+    description: "Pack anniversaire 1gateau au choix 20nems 30crepes nature et choco 10 Schott eggs 12mil",
+    images:  ["img/pack-carton.jpeg"],
   },
 ];
 
@@ -334,7 +460,7 @@ btnCheckout.addEventListener("click", () => {
   msg += `\nTotal: ${cartTotal.textContent}\n\n`;
   msg += `Client: ${name}\nTéléphone: ${phone}\nAdresse: ${address}, ${city}\nMode: ${mode}`;
 
-  const wa = `https://wa.me/237653154864?text=${encodeURIComponent(msg)}`;
+  const wa = `https://wa.me/237695445208?text=${encodeURIComponent(msg)}`;
   window.open(wa, "_blank");
 });
 
