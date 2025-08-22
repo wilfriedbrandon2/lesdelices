@@ -97,7 +97,7 @@ const products = [
     name: "Tarif crêpes",
     category: "crêpes",
     price: 1000,
-    description: "10 crêpes nature 1000f  |10 crêpes au chocolat 1500f | 10 crêpes au lait 1500f | 10crepes marbré 1500f | supplement chocolat 300f | 1crepes viande hachée fromage 500f | crepe pané 1000f _3 a 2500f | crepe poulet fromage 800f | crepe poulet fromage pané 1200f unité | #Les Délices de Barbie Bonne dégustation",
+    description: "10 crêpes nature 1000f ---10 crêpes au chocolat 1500f---- | ----10 crêpes au lait 1500f--- | ---10crepes marbré 1500f--- | ---supplement chocolat 300f--- | ---1crepes viande hachée fromage 500f--- |--- crepe pané 1000f _3 a 2500f--- | ---crepe poulet fromage 800f--- | ---crepe poulet fromage pané 1200f unité--- | #Les Délices de Barbie Bonne dégustation",
     images:  ["img/crepa.jpeg", "img/crepa1.jpeg", "img/crepes.jpeg", "img/crepes choco1.jpeg", "img/crepes choco.jpeg"],
     variations: [
       { label: "10 crêpes nature", price: 1000 },
@@ -116,7 +116,7 @@ const products = [
     name: "Tarif apéritif",
     category: "apéritif",
     price: 1000,
-    description: "Cacahuètes  (avec arachides) 0.5l _1000f,  1l_ 2000f, 1.5l _3000f | Croquettes  (sans arachides) 0.5l _1000f, 1l_2000f, 1.5l _2800f  | Caramel 0.5l _800f, 1l_ 1500f, 1,5l_ 2400f | Coconut sweet 0.5l _1000f,1l_2000f, 1.5l_3000f Bonne dégustation #Les Délices de Barbie",
+    description: "Cacahuètes  (avec arachides) 0.5l _1000f,  1l_ 2000f, 1.5l _3000f |----- Croquettes  (sans arachides) 0.5l _1000f, 1l_2000f, 1.5l _2800f----  | ----Caramel 0.5l _800f, 1l_ 1500f, 1,5l_ 2400f--- | ---Coconut sweet 0.5l _1000f,1l_2000f, 1.5l_3000f---- Bonne dégustation #Les Délices de Barbie",
     images:  ["img/caramel.jpeg", "img/rocks.jpeg","img/rock2.jpeg"],
     variations: [
       { label: "Cacahuètes(avec arachides) 0.5l", price: 1000 },
@@ -453,12 +453,12 @@ btnCheckout.addEventListener("click", () => {
   const city = document.getElementById("city").value;
   const mode = document.getElementById("mode").value;
 
-  let msg = `Nouvelle commande :\n\n`;
+  let msg = `📑Nouvelle commande :\n\n`;
   cart.forEach(item => {
     msg += `- ${item.name} : ${item.price} FCFA\n`;
   });
-  msg += `\nTotal: ${cartTotal.textContent}\n\n`;
-  msg += `Client: ${name}\nTéléphone: ${phone}\nAdresse: ${address}, ${city}\nMode: ${mode}`;
+  msg += `\nTotal: 💰${cartTotal.textContent}\n\n`;
+  msg += `Client: 👤${name}\nTéléphone: 📞${phone}\nAdresse: 🏘️${address}, 📍${city}\nMode: 🚚${mode}`;
 
   const wa = `https://wa.me/237695445208?text=${encodeURIComponent(msg)}`;
   window.open(wa, "_blank");
