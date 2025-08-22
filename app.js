@@ -35,7 +35,7 @@ const products = [
     category: "patisséries",
     price: 2500,
     description: "Tarif gâteaux Marbre 3000f Orange 2500f Au citron 2500f Chocolat 3000f Noix de coco 3000f Nature 2500f Autre parfum 3mil Les Délices de Barbie Bonne dégustation",
-    images: ["img/cake1.jpeg", "img/cake2.jpeg","img/cake1.jpeg"],
+    images: ["img/cake1.jpeg", "img/cake2.jpeg","img/cake3.jpeg"],
     variations: [
       { label: "gâteaux Nature ", price: 2500 },
       { label: "gâteaux Au citron ", price: 2500 },
@@ -62,7 +62,7 @@ const products = [
     id: 5,
     name: "Pack prestige",
     category: "Combo",
-    price: 3500,
+    price: 4500,
     description: "1 plantain Burger premium 2 crêpes viande hachée fromage 1 crêpe pané 3broiche viande 1 Portion de frites +une boisson au choix Prix 4500f sans boisson 5mil avec une boisson au 5500f avec jus de fruits naturels",
     images: ["img/packtera.jpeg"],
     variations: [
@@ -77,7 +77,7 @@ const products = [
     category: "Pizza",
     price: 500,
     description: "Mini pizza 500f unité disponible avec Les Délices de Barbie, Bonne dégustation",
-    images: ["img/Minipacker.jpeg"],
+    images: ["img/pizza.jpeg","img/Minipacker.jpeg"],
   },
   {
     id: 7,
@@ -85,11 +85,12 @@ const products = [
     category: "Nems",
     price: 1500,
     description: "poisson 150f,viande 150f,Feuilles de nems 10_500f,Commande minimum 10pieces",
-    images: ["img/tune.jpeg"],
+    images: ["img/tune.jpeg","img/nems.jpeg"],
     variations: [
       { label: "Nems poisson 150f x 10", price: 1500 },
       { label: "Nems viande 150f x 10", price: 1500 },
-      { label: "Feuilles de nems 10_500f", price: 10500 }
+      { label: "Nems precuit 100f x 10", price: 1000 },
+      { label: "Feuilles de nems 10 a 500f", price: 500 }
     ]
   },
   {
@@ -140,7 +141,7 @@ const products = [
     category: "Boisson",
     price: 1000,
     description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande",
-    images:  ["img/baoba.jpeg","img/jusa1.jpeg", "img/jus collection.jpeg","img/jus a2.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
+    images:  ["img/jus collection.jpeg"],
     variations: [
       { label: "Boisson détox 0.5l Beca", price: 1000 },
       { label: "Boisson détox 1l Beca", price: 1800 },
@@ -156,7 +157,7 @@ const products = [
     category: "Boisson",
     price: 500,
     description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande",
-    images:  [ "img/jus collection.jpeg","img/baoba.jpeg","img/jusa1.jpeg","img/jus a2.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
+    images:  ["img/baoba.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
     variations: [
       { label: "Menthe au lait 0.5l ", price: 500 },
       { label: "Menthe au lait 1l", price: 1000 },
@@ -171,7 +172,7 @@ const products = [
     category: "Boisson",
     price: 1000,
     description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande.NB ; les saveurs varie en fonction des saisons ",
-    images:  ["img/jusa1.jpeg", "img/jus collection.jpeg","img/baoba.jpeg","img/jus a2.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
+    images:  ["img/jusa1.jpeg", "img/jus collection.jpeg","img/jus a2.jpeg"],
     variations: [
       { label: "Cocktail (Ananas pastèque papaye) 0.5l", price: 1000 },
       { label: "Cocktail (Ananas Cassis) 0.5l", price: 1000 },
@@ -204,6 +205,48 @@ const products = [
     price: 12000,
     description: "Pack anniversaire 1gateau au choix 20nems 30crepes nature et choco 10 Schott eggs 12mil",
     images:  ["img/pack-carton.jpeg"],
+  },
+  {
+    id: 13,
+    name: " Poulet mayo   ",
+    category: "Poulet",
+    price: 3000,
+    description: "Poulet mayo 1/4 avec frites 3000f 1/2 avec frittes 5500f 1 entier avec frittes 8, 10mil Supplement Frites de pommes où plantain",
+    images:  ["img/Poulet mayo1.jpeg","img/Poulet mayo.jpeg"],
+    variations: [
+      { label: "Poulet mayo 1/4 avec frites", price: 3000 },
+      { label: "1/2 avec frittes", price: 5500 },
+      { label: "1 entier avec frittes", price: 8000 },
+      { label: "1 entier avec frittes Supplement Frites de pommes où plantain", price: 10000 }
+    ]
+  },
+  {
+    id: 14,
+    name: "plantain Burger",
+    category: "Combo",
+    price: 1000,
+    description: "-1000f sans fromage -1500f avec fromage - Supplément frittes de pommes 500f ",
+    images:  ["img/sandplan2.jpeg","img/sandplan3.jpeg"],
+    variations: [
+      { label: "sans fromage", price: 1000 },
+      { label: "avec fromage", price: 1500 },
+      { label: "sans fromage Supplément frittes de pommes", price: 1500 },
+      { label: "sans fromage Supplément frittes de pommes", price: 2000 }
+    ]
+  },
+  {
+    id: 14,
+    name: "cheese Burger",
+    category: "Combo",
+    price: 500,
+    description: "Cheese Burger -Mini 500f -xl 1000f Supplément frittes de pommes 500f",
+    images:  ["img/burger.jpeg","img/burger1.jpeg","img/burger3.jpeg"],
+    variations: [
+      { label: "Cheese Burger Mini", price: 500 },
+       { label: "Cheese Burger Mini Supplément frittes de pommes", price: 1000 },
+      { label: "Cheese Burger xl", price: 1000 },
+      { label: "Cheese Burger xl Supplément frittes de pommes", price: 1500 }
+    ]
   },
 ];
 
