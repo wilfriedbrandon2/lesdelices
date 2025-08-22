@@ -97,7 +97,7 @@ const products = [
     name: "Tarif crêpes",
     category: "crêpes",
     price: 1000,
-    description: "10 crêpes nature 1000f  | 10 crêpes au chocolat 1500f | 10 crêpes au lait 1500f | 10crepes marbré 1500f | supplement chocolat 300f | 1crepes viande hachée fromage 500f | crepe pané 1000f _3 a 2500f | crepe poulet fromage 800f | crepe poulet fromage pané 1200f unité | #Les Délices de Barbie Bonne dégustation",
+    description: "10 crêpes nature 1000f  |10 crêpes au chocolat 1500f | 10 crêpes au lait 1500f | 10crepes marbré 1500f | supplement chocolat 300f | 1crepes viande hachée fromage 500f | crepe pané 1000f _3 a 2500f | crepe poulet fromage 800f | crepe poulet fromage pané 1200f unité | #Les Délices de Barbie Bonne dégustation",
     images:  ["img/crepa.jpeg", "img/crepa1.jpeg", "img/crepes.jpeg", "img/crepes choco1.jpeg", "img/crepes choco.jpeg"],
     variations: [
       { label: "10 crêpes nature", price: 1000 },
