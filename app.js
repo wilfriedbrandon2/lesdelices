@@ -254,7 +254,7 @@ const products = [
     category: "Combo",
     price: 3000,
     description: "Pack délice Il coûte 3mil sans boisson 3500f avec une boisson au choix",
-    images:  ["img/packer2.jpeg"],
+    images:  ["img/pack22.jpeg","img/packer2.jpeg"],
     variations: [
       { label: "Pack délice simple", price: 3000 },
        { label: "Pack délice simple + Boisson au choix", price: 3500 }
