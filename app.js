@@ -118,7 +118,7 @@ const products = [
     category: "apéritif",
     price: 1000,
     description: "Cacahuètes  (avec arachides) 0.5l _1000f,  1l_ 2000f, 1.5l _3000f |----- Croquettes  (sans arachides) 0.5l _1000f, 1l_2000f, 1.5l _2800f----  | ----Caramel 0.5l _800f, 1l_ 1500f, 1,5l_ 2400f--- | ---Coconut sweet 0.5l _1000f,1l_2000f, 1.5l_3000f---- Bonne dégustation #Les Délices de Barbie",
-    images:  ["img/caramel.jpeg", "img/rocks.jpeg","img/rock2.jpeg"],
+    images:  ["img/caramel.jpeg", "img/rocks.jpeg","img/rocksa.jpeg","img/rock2.jpeg","img/coco.jpeg"],
     variations: [
       { label: "Cacahuètes(avec arachides) 0.5l", price: 1000 },
       { label: "Cacahuètes(avec arachides) 1l ", price: 2000 },
@@ -247,6 +247,26 @@ const products = [
       { label: "Cheese Burger xl", price: 1000 },
       { label: "Cheese Burger xl Supplément frittes de pommes", price: 1500 }
     ]
+  },
+  {
+    id: 15,
+    name: "Pack délice",
+    category: "Combo",
+    price: 3000,
+    description: "Pack délice Il coûte 3mil sans boisson 3500f avec une boisson au choix",
+    images:  ["img/packer2.jpeg"],
+    variations: [
+      { label: "Pack délice simple", price: 3000 },
+       { label: "Pack délice simple + Boisson au choix", price: 3500 }
+    ]
+  },
+  {
+    id: 16,
+    name: "Pack découverte ",
+    category: "Combo",
+    price: 4000,
+    description: "1burger classic -1crepe pané -3 pastels -2crepes viande fromage -1 œuf pané Prix 4mil",
+    images:  ["img/precu.jpeg"],
   },
 ];
 
@@ -501,7 +521,7 @@ btnCheckout.addEventListener("click", () => {
     msg += `🧧${item.name} : 💰 ${item.price} FCFA\n`;
   });
   msg += `\nTotal: 💰${cartTotal.textContent}\n\n`;
-  msg += `Client: 👤${name}\nTéléphone: 📞${phone}\nAdresse: 🏘️${address}, 📍${city}\nMode: 🚚${mode}`;
+  msg += `Client: 👤${name}\nTéléphone: 📞${phone}\nAdresse: 🏘️${address}, 📑${city}\nMode: 🚚${mode}`;
 
   const wa = `https://wa.me/237695445208?text=${encodeURIComponent(msg)}`;
   window.open(wa, "_blank");
