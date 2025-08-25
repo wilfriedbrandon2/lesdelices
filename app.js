@@ -141,7 +141,7 @@ const products = [
     category: "Boisson",
     price: 1000,
     description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande",
-    images:  ["img/jus collection.jpeg"],
+    images:  ["img/beca.jpeg"],
     variations: [
       { label: "Boisson détox 0.5l Beca", price: 1000 },
       { label: "Boisson détox 1l Beca", price: 1800 },
