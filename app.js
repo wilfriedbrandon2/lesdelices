@@ -212,7 +212,7 @@ const products = [
     category: "Poulet",
     price: 3000,
     description: "Poulet mayo 1/4 avec frites 3000f 1/2 avec frittes 5500f 1 entier avec frittes 8, 10mil Supplement Frites de pommes où plantain",
-    images:  ["img/Poulet mayo1.jpeg","img/Poulet mayo.jpeg"],
+    images:  ["img/pl.jpeg","img/Poulet mayo1.jpeg","img/Poulet mayo.jpeg"],
     variations: [
       { label: "Poulet mayo 1/4 avec frites", price: 3000 },
       { label: "1/2 avec frittes", price: 5500 },
