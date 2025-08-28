@@ -518,7 +518,7 @@ closeDrawer.addEventListener("click", () => {
     alert("🛒 Votre panier est vide !");
     return; // stop execution
   }
-  
+
   let msg = `📑Nouvelle commande :\n\n`;
   cart.forEach(item => {
     msg +=  `🧧${item.qty} × ${item.name} : 💰 ${item.price} FCFA\n`;
@@ -536,3 +536,17 @@ closeDrawer.addEventListener("click", () => {
 renderProducts(products);
 renderCategories();
 document.getElementById("year").textContent = new Date().getFullYear();
+
+//  APP INSTALLATION
+function isIos() {
+  return /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+}
+
+function isInStandaloneMode() {
+  return ("standalone" in window.navigator) && window.navigator.standalone;
+}
+
+if (isIos() && !isInStandaloneMode()) {
+  document.getElementById("pwa-ios-hint").style.display = "block";
+}
+

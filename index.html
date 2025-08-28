@@ -7,6 +7,18 @@
   <meta name="description" content="Les Délices de Barbie — Pâtisseries artisanales à Douala. Commandez en ligne et recevez la confirmation via WhatsApp." />
   <link rel="icon" href="favicon.ico" />
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <!-- Apple Touch Icon (for iPhone/iPad home screen) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/logo-180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/logo-152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="icons/logo-167.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icons/logo-120.png">
+
+  <!-- Make PWA full screen on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Les Délices de Barbie">
+
+
   <link rel="manifest" href="manifest.json" />
   <!-- app header bg -->
  <meta name="theme-color" content="#ff3d6c">
@@ -56,6 +68,14 @@
 
     <h2 class="section-title">Nos produits</h2>
     <button id="installBtn" style=" padding: 12px 20px;background: #ff3d6c;color: white;border: none;border-radius: 8px;font-size: 12px;cursor: pointer; margin-top: 10px; display: none;">📲 Installer L'Application</button>
+    <button id="pwa-install" style="display:none;">Installation IOS</button>
+
+    <div id="pwa-ios-hint" style="display:none; background:#ffc; padding:10px;">
+      📲 Pour installer cette application sur votre iPhone :  
+      1. Appuyez sur <strong>Partager</strong> (icône en bas)  
+      2. Puis sélectionnez <strong>Ajouter à l’écran d’accueil</strong>
+    </div>
+
 
     <p class="muted" style="margin-left: 15px;margin-right: 10px; margin-bottom: 15px;">Ajoutez au panier et validez la commande via WhatsApp.</p>
 
