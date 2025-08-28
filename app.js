@@ -560,3 +560,8 @@ let startY;
            window.location.reload();
        }
    });
+
+
+function refreshApp() {
+    window.location.reload();
+}

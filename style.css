@@ -421,6 +421,27 @@ input, select, textarea {
   text-align: center;
   font-size: 16px;
 }
+/* 
+app refresh icon */
+.refresh-button {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    background-color: pink; /* Background color */
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000; /* Ensure it is above other elements */
+}
 
+.refresh-icon {
+    color: white; /* Icon color */
+    font-size: 24px; /* Adjust icon size as needed */
+}
 
 
