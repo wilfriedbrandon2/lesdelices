@@ -506,11 +506,11 @@ closeDrawer.addEventListener("click", () => {
 -------------------------------- */
 
 
-  const name = document.getElementById("fullName").value || "(non précisé)";
-  const phone = document.getElementById("phone").value || "(non précisé)";
-  const address = document.getElementById("address").value || "(non précisé)";
-  const city = document.getElementById("city").value || "(non précisé)";
-  const mode = document.getElementById("mode").value || "(non précisé)";
+  const name = document.getElementById("fullName").value ;
+  const phone = document.getElementById("phone").value ;
+  const address = document.getElementById("address").value;
+  const city = document.getElementById("city").value ;
+  const mode = document.getElementById("mode").value ;
 
 
   btnCheckout.addEventListener("click", () => {
