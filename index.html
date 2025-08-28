@@ -7,6 +7,10 @@
   <meta name="description" content="Les Délices de Barbie — Pâtisseries artisanales à Douala. Commandez en ligne et recevez la confirmation via WhatsApp." />
   <link rel="icon" href="favicon.ico" />
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <link rel="manifest" href="manifest.json" />
+  <!-- app header bg -->
+ <meta name="theme-color" content="#ff3d6c">
+
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -51,6 +55,8 @@
     </div>
 
     <h2 class="section-title">Nos produits</h2>
+    <button id="installBtn" style=" padding: 12px 20px;background: #ff3d6c;color: white;border: none;border-radius: 8px;font-size: 12px;cursor: pointer; margin-top: 10px; display: none;">📲 Installer L'Application</button>
+
     <p class="muted" style="margin-left: 15px;margin-right: 10px; margin-bottom: 15px;">Ajoutez au panier et validez la commande via WhatsApp.</p>
 
     <div id="productGrid" class="grid"></div>
@@ -127,7 +133,7 @@
       <div class="form-row">
         <div class="cnn">
           <label>Une Note?</label>
-          <input id="city" placeholder="je veut sa d'ici 30mins">
+          <input id="city" placeholder="Ex: d'ici 30mins">
         </div>
         <div class="cnn">
           <label>Mode</label>
@@ -199,5 +205,31 @@
 
   <script src="app.js"></script>
    <div id="toast" class="toast"></div>
+   <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("Service Worker registered ✅"));
+  }
+</script>
+<script>
+  let deferredPrompt;
+  const installBtn = document.getElementById("installBtn");
+
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = "block"; // Show the button
+  });
+
+  installBtn.addEventListener("click", async () => {
+    installBtn.style.display = "none";
+    deferredPrompt.prompt();
+    const choice = await deferredPrompt.userChoice;
+    console.log("User choice:", choice.outcome);
+    deferredPrompt = null;
+  });
+</script>
+
+
 </body>
 </html>

@@ -504,24 +504,27 @@ closeDrawer.addEventListener("click", () => {
 /* -------------------------------
    Checkout via WhatsApp
 -------------------------------- */
-btnCheckout.addEventListener("click", () => {
-  if (!cart.length) {
-    alert("Votre panier est vide !");
-    return;
+
+
+  const name = document.getElementById("fullName").value || "(non précisé)";
+  const phone = document.getElementById("phone").value || "(non précisé)";
+  const address = document.getElementById("address").value || "(non précisé)";
+  const city = document.getElementById("city").value || "(non précisé)";
+  const mode = document.getElementById("mode").value || "(non précisé)";
+
+
+  btnCheckout.addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("🛒 Votre panier est vide !");
+    return; // stop execution
   }
-
-  const name = document.getElementById("fullName").value;
-  const phone = document.getElementById("phone").value;
-  const address = document.getElementById("address").value;
-  const city = document.getElementById("city").value;
-  const mode = document.getElementById("mode").value;
-
+  
   let msg = `📑Nouvelle commande :\n\n`;
   cart.forEach(item => {
-    msg += `🧧${item.name} : 💰 ${item.price} FCFA\n`;
+    msg +=  `🧧${item.qty} × ${item.name} : 💰 ${item.price} FCFA\n`;
   });
   msg += `\nTotal: 💰${cartTotal.textContent}\n\n`;
-  msg += `Client: 👤${name}\nTéléphone: 📞${phone}\nAdresse: 🏘️${address}, 📑${city}\nMode: 🚚${mode}`;
+  msg += `Client: 👤${name}\nTéléphone: 📞${phone}\nAdresse: 🏘️${address}\n, 📑${city}\nMode: 🚚${mode}`;
 
   const wa = `https://wa.me/237695445208?text=${encodeURIComponent(msg)}`;
   window.open(wa, "_blank");
