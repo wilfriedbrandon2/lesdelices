@@ -550,3 +550,13 @@ if (isIos() && !isInStandaloneMode()) {
   document.getElementById("pwa-ios-hint").style.display = "block";
 }
 
+let startY;
+   window.addEventListener('touchstart', (event) => {
+       startY = event.touches[0].clientY;
+   });
+   window.addEventListener('touchmove', (event) => {
+       const currentY = event.touches[0].clientY;
+       if (currentY > startY + 50) { // Adjust the threshold as needed
+           window.location.reload();
+       }
+   });
