@@ -268,6 +268,20 @@ const products = [
     description: "1burger classic -1crepe pané -3 pastels -2crepes viande fromage -1 œuf pané Prix 4mil",
     images:  ["img/precu.jpeg"],
   },
+  {
+    id: 17,
+    name: "poulet pané  ",
+    category: "Combo",
+    price: 3000,
+    description: "Tarifs poulet pané 3 morceaux +frittes _3mil 5 morceaux+frittes _5000f 10morceaux + frittes _8000f Supplément frittes 500f",
+    images:  ["img/pane.jpeg","img/pane3.jpeg","img/pane2.jpeg","img/pane4.jpeg"],
+    variations: [
+      { label: "poulet pané 3 morceaux +frittes", price: 3000 },
+      { label: "poulet pané 5 morceaux + frittes", price: 5000 },
+      { label: "poulet pané 10morceaux + frittes", price: 8000 },
+      { label: " Supplément frittes 500f", price: 500 },
+    ]
+  },
 ];
 
 let cart = [];
