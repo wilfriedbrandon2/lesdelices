@@ -282,6 +282,19 @@ const products = [
       { label: " Supplément frittes 500f", price: 500 },
     ]
   },
+  {
+    id: 18,
+    name: "Hamburger  ",
+    category: "Combo",
+    price: 600,
+    description: "Hamburger 600f unité Supplément frittes 500f",
+    images:  ["img/pane3.jpeg","img/pane4.jpeg"],
+    variations: [
+      { label: "Hamburger 600f unité", price: 600},
+      { label: "Hamburger 600f unité Supplément frittes 500f", price: 1100 },
+      { label: "Supplément frittes 500f", price: 500 }
+    ]
+  },
 ];
 
 let cart = [];
