@@ -312,7 +312,7 @@ const products = [
     images:  ["img/recep.jpeg","img/recep1.jpeg"],
     variations: [
       { label: "2500frs a partir de 10pieces", price: 2500},
-      { label: " 2000frs a partir de 50pieces", price: 2000}
+      { label: " 2000frs a partir de 50pieces", price: 2000},
     ]
   }
 ];
