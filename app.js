@@ -550,7 +550,7 @@ closeDrawer.addEventListener("click", () => {
 
 /* -------------------------------
    Checkout via WhatsApp
--------------------------------- */
+-------------------------------- 
 
 
   const name = document.getElementById("fullName").value ;
@@ -571,11 +571,39 @@ closeDrawer.addEventListener("click", () => {
     msg +=  `🧧${item.qty} × ${item.name} : 💰 ${item.price} FCFA\n`;
   });
   msg += `\nTotal: 💰${cartTotal.textContent}\n\n`;
-  msg += `Client: 👤${fullName}\nTéléphone: 📞${phone}\nAdresse: 🏘️${address}\n, 📑${city}\nMode: 🚚${mode}`;
+  msg += `Client: 👤${name}\nTéléphone: 📞${phone}\nAdresse: 🏘️${address}\n, 📑${city}\nMode: 🚚${mode}`;
 
   const wa = `https://wa.me/237695445208?text=${encodeURIComponent(msg)}`;
   window.open(wa, "_blank");
+});*/
+document.getElementById("btnCheckout").addEventListener("click", () => {
+  // Get user info
+  const name = document.getElementById("fullName").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const address = document.getElementById("address").value.trim();
+  const city = document.getElementById("city").value.trim();
+  const mode = document.getElementById("mode").value;
+
+  // Validate (optional)
+  if (!name || !phone || !address) {
+    alert("Veuillez remplir vos informations avant de commander !");
+    return;
+  }
+
+  // Build message
+  let msg = `📑 Nouvelle commande :\n\n`;
+  cart.forEach(item => {
+    msg += `🧧 ${item.qty} × ${item.name} : 💰 ${item.price} FCFA\n`;
+  });
+
+  msg += `\nTotal: 💰 ${cartTotal.textContent}\n\n`;
+  msg += `Client: 👤 ${name}\nTéléphone: 📞 ${phone}\nAdresse: 🏘️ ${address}\nNote: 📑 ${city}\nMode: 🚚 ${mode}`;
+
+  // Send to WhatsApp
+  const wa = `https://wa.me/237695445208?text=${encodeURIComponent(msg)}`;
+  window.open(wa, "_blank");
 });
+
 
 /* -------------------------------
    Init
