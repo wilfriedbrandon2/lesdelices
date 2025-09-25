@@ -77,7 +77,7 @@ const products = [
     category: "Pizza",
     price: 500,
     description: "Mini pizza 500f unité disponible avec Les Délices de Barbie, Bonne dégustation",
-    images: ["img/pizza.jpeg","img/Minipacker.jpeg"],
+    images: ["img/pizza.jpeg","img/Minipacker.jpeg","img/mini pizza.jpeg"],
   },
   {
     id: 7,
@@ -191,7 +191,7 @@ const products = [
     category: "Combo",
     price: 3500,
     description: "Premium plantain et cheese  Burger Une mini pizza / une portion de frites  3pastels viande hachée  1boissons au choix (menthe ou baobab au lait  ) Prix 4mil 3500f sans boisson",
-    images:  ["img/Pack salé.jpeg", "img/packyamo.jpeg","img/packyam1.jpeg"],
+    images:  ["img/pack sale1.jpeg","img/pack sale.jpeg","img/Pack salé.jpeg", "img/packyamo.jpeg","img/packyam1.jpeg"],
     variations: [
       { label: "Pack salé simple", price: 3500 },
       { label: "Pack salé + 1boissons (menthe au lait)", price: 4000 },
@@ -293,6 +293,26 @@ const products = [
       { label: "Hamburger 600f unité", price: 600},
       { label: "Hamburger 600f unité Supplément frittes 500f", price: 1100 },
       { label: "Supplément frittes 500f", price: 500 }
+    ]
+  },
+  {
+    id: 19,
+    name: "pack visité  ",
+    category: "Combo",
+    price: 7000,
+    description: "20pastels, 1L de cacahuete, 1l de menthe au lait",
+    images:  ["img/pack visite.jpeg","img/pack visite1.jpeg"],
+  },
+  {
+    id: 20,
+    name: "Gamelle pour cérémonie  ",
+    category: "Combo",
+    price: 2500,
+    description: "poulet,poisson,chips,Boulettes miondo,nems,Oeuf dur 2500frs a partir de 10pieces et 2000frs a partir de 50pieces",
+    images:  ["img/recep.jpeg","img/recep1.jpeg"],
+    variations: [
+      { label: "2500frs a partir de 10pieces", price: 2500},
+      { label: " 2000frs a partir de 50pieces", price: 2000}
     ]
   },
 ];
@@ -551,7 +571,7 @@ closeDrawer.addEventListener("click", () => {
     msg +=  `🧧${item.qty} × ${item.name} : 💰 ${item.price} FCFA\n`;
   });
   msg += `\nTotal: 💰${cartTotal.textContent}\n\n`;
-  msg += `Client: 👤${name}\nTéléphone: 📞${phone}\nAdresse: 🏘️${address}\n, 📑${city}\nMode: 🚚${mode}`;
+  msg += `Client: 👤${fullName}\nTéléphone: 📞${phone}\nAdresse: 🏘️${address}\n, 📑${city}\nMode: 🚚${mode}`;
 
   const wa = `https://wa.me/237695445208?text=${encodeURIComponent(msg)}`;
   window.open(wa, "_blank");
