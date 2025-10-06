@@ -5,6 +5,19 @@
 // Sample products
 const products = [
   {
+    id: 21,
+    name: "Pack douceur",
+    category: "Combo",
+    price: 3500,
+    description: "1plantain Burger 1portion de frites 3bouches plantain 5crepes marbré Un jus de fruit naturel Prix :3500f, 2700f sans boisson ,3300f avec menthe au lait",
+    images: ["img/new.jpeg"],
+    variations: [
+      { label: "Pack douceur complet", price: 3500 },
+      { label: "Pack douceur sans boisson", price: 2700 },
+      { label: "Pack douceur avec menthe au lait", price: 3300 },
+    ]
+  },
+  {
     id: 1,
     name: "Bol de crudités",
     category: "crudités",
@@ -274,7 +287,7 @@ const products = [
     category: "Combo",
     price: 3000,
     description: "Tarifs poulet pané 3 morceaux +frittes _3mil 5 morceaux+frittes _5000f 10morceaux + frittes _8000f Supplément frittes 500f",
-    images:  ["img/pouletp1.jpeg","img/pane.jpeg","img/pouletp.jpeg",],
+    images:  ["img/fffff.jpeg","img/pane.jpeg","img/pouletp.jpeg",],
     variations: [
       { label: "poulet pané 3 morceaux +frittes", price: 3000 },
       { label: "poulet pané 5 morceaux + frittes", price: 5000 },
