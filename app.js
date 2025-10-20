@@ -4,6 +4,43 @@
 
 // Sample products
 const products = [
+    {
+    id: 24,
+    name: "Pack caviar",
+    category: "Combo",
+    price: 5100,
+    description: "1/4 poulet mayo 1bol de crudités1mini burger et un hamburger 1bouteille de menthe au laitOu 1bouteille de jus de fruits naturel_Prix 5100f sans boisson 5600f avec menthe6mil avec jus de fruits naturel_",
+    images: ["img/CAVI.jpeg","img/CAVI1.jpeg"],
+    variations: [
+      { label: "Pack caviar", price: 5100 },
+      { label: "Pack caviar avec menthe", price: 5600 },
+      { label: "Pack caviar avec jus de fruit naturel", price: 6000 },
+    ]
+  },
+  {
+    id: 23,
+    name: "Pack premium",
+    category: "Combo",
+    price: 9000,
+    description: "1/4Poulet mayo+frites 3morceaux de poulet pané+frites1pack délice1jus de fruitOu une 1bouteille de menthe_Prix 9mil avec menthe 9500f avec jus de fruit naturel_",
+    images: ["img/PREM1.jpeg","img/PREM.jpeg"],
+    variations: [
+      { label: "Pack premium", price: 9000 },
+      { label: "Pack premium avec jus de fruit naturel", price: 9500 },
+    ]
+  },
+  {
+    id: 22,
+    name: "Pack élection",
+    category: "Combo",
+    price: 5000,
+    description: "2morceaux de poulet pané+frittes 2crepes viande hachée fromage 1burger5crepes Nature 1bouteille de menthe Prix 5500f avec menthe5000f sans menthe",
+    images: ["img/ELEC.jpeg","img/ELEC1.jpeg"],
+    variations: [
+      { label: "Pack élection ", price: 5000 },
+      { label: "Pack élection avec menthe", price: 5500 },
+    ]
+  },
   {
     id: 21,
     name: "Pack douceur",
@@ -224,11 +261,11 @@ const products = [
     name: " Poulet mayo   ",
     category: "Poulet",
     price: 3000,
-    description: "Poulet mayo 1/4 avec frites 3000f 1/2 avec frittes 5500f 1 entier avec frittes 8, 10mil Supplement Frites de pommes où plantain",
+    description: "Poulet mayo 1/4 avec frites 3000f 1/2 avec frittes 5000f 1 entier avec frittes 8, 10mil Supplement Frites de pommes où plantain",
     images:  ["img/pl.jpeg","img/Poulet mayo1.jpeg","img/Poulet mayo.jpeg"],
     variations: [
       { label: "Poulet mayo 1/4 avec frites", price: 3000 },
-      { label: "1/2 avec frittes", price: 5500 },
+      { label: "1/2 avec frittes", price: 5000 },
       { label: "1 entier avec frittes", price: 8000 },
       { label: "1 entier avec frittes Supplement Frites de pommes où plantain", price: 10000 }
     ]
