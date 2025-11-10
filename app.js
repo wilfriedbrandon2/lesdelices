@@ -5,6 +5,22 @@
 // Sample products
 const products = [
     {
+    id: 26,
+    name: "Egg cheese burger ",
+    category: "Combo",
+    price: 2000,
+    description: "Egg cheese burger ",
+    images: ["img/egg cheese.jpeg"],
+  },
+    {
+    id: 25,
+    name: "Pack Gold",
+    category: "Combo",
+    price: 10000,
+    description: "Pack Gold 1/4Poulet mayo 2egg cheese burger 4crepes viande hachée fromage 1bouteille de menthe",
+    images: ["img/pack gold.jpeg","img/pack gold1.jpeg"],
+  },
+    {
     id: 24,
     name: "Pack caviar",
     category: "Combo",
@@ -134,12 +150,12 @@ const products = [
     name: "Tarif Nems ",
     category: "Nems",
     price: 1500,
-    description: "poisson 150f,viande 150f,Feuilles de nems 10_500f,Commande minimum 10pieces",
+    description: "poisson 150f,viande 150f,Feuilles de nems 10_500f,Commande minimum 10pieces,Précuit 125f et 100frs a partir de 30 précuit",
     images: ["img/tune.jpeg","img/nems.jpeg"],
     variations: [
-      { label: "Nems poisson 150f x 10", price: 1500 },
-      { label: "Nems viande 150f x 10", price: 1500 },
-      { label: "Nems precuit 100f x 10", price: 1000 },
+      { label: "Nems poisson 150f ", price: 1500 },
+      { label: "Nems viande 150f ", price: 1500 },
+      { label: "Nems precuit 125f", price: 1250 },
       { label: "Feuilles de nems 10 a 500f", price: 500 }
     ]
   },
@@ -154,9 +170,10 @@ const products = [
       { label: "10 crêpes nature", price: 1000 },
       { label: "10 crêpes au chocolat ", price: 1500 },
       { label: "10 crêpes au lait ", price: 1500 },
-      { label: "1crepes viande hachée fromage ", price: 500 },
+      { label: "10crepes marbré ", price: 1500 },
+      { label: "1crepes viande hachée fromage ", price: 700 },
       { label: "crepe pané  ", price: 1000 },
-      { label: "crepe pané x 3", price: 2500 },
+      { label: "crepe pané x 3", price: 2800 },
       { label: "supplement chocolat ", price: 300 },
       { label: "crepe poulet fromage ", price: 800 },
       { label: "crepe poulet fromage pané", price: 1200 }
@@ -304,7 +321,7 @@ const products = [
     category: "Combo",
     price: 3000,
     description: "Pack délice Il coûte 3mil sans boisson 3500f avec une boisson au choix",
-    images:  ["img/pack22.jpeg","img/packer2.jpeg"],
+    images:  ["img/pack22.jpeg","img/packer2.jpeg","img/delpack.jpeg"],
     variations: [
       { label: "Pack délice simple", price: 3000 },
        { label: "Pack délice simple + Boisson au choix", price: 3500 }
