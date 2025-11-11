@@ -4,114 +4,7 @@
 
 // Sample products
 const products = [
-    {
-    id: 26,
-    name: "Egg cheese burger ",
-    category: "Combo",
-    price: 2000,
-    description: "Egg cheese burger ",
-    images: ["img/egg cheese.jpeg"],
-  },
-    {
-    id: 25,
-    name: "Pack Gold",
-    category: "Combo",
-    price: 10000,
-    description: "Pack Gold 1/4Poulet mayo 2egg cheese burger 4crepes viande hachée fromage 1bouteille de menthe",
-    images: ["img/pack gold.jpeg","img/pack gold1.jpeg"],
-  },
-    {
-    id: 24,
-    name: "Pack caviar",
-    category: "Combo",
-    price: 5100,
-    description: "1/4 poulet mayo 1bol de crudités1mini burger et un hamburger 1bouteille de menthe au laitOu 1bouteille de jus de fruits naturel_Prix 5100f sans boisson 5600f avec menthe6mil avec jus de fruits naturel_",
-    images: ["img/CAVI.jpeg","img/CAVI1.jpeg"],
-    variations: [
-      { label: "Pack caviar", price: 5100 },
-      { label: "Pack caviar avec menthe", price: 5600 },
-      { label: "Pack caviar avec jus de fruit naturel", price: 6000 },
-    ]
-  },
-  {
-    id: 23,
-    name: "Pack premium",
-    category: "Combo",
-    price: 9000,
-    description: "1/4Poulet mayo+frites 3morceaux de poulet pané+frites1pack délice1jus de fruitOu une 1bouteille de menthe_Prix 9mil avec menthe 9500f avec jus de fruit naturel_",
-    images: ["img/PREM1.jpeg","img/PREM.jpeg"],
-    variations: [
-      { label: "Pack premium", price: 9000 },
-      { label: "Pack premium avec jus de fruit naturel", price: 9500 },
-    ]
-  },
-  {
-    id: 22,
-    name: "Pack élection",
-    category: "Combo",
-    price: 5000,
-    description: "2morceaux de poulet pané+frittes 2crepes viande hachée fromage 1burger5crepes Nature 1bouteille de menthe Prix 5500f avec menthe5000f sans menthe",
-    images: ["img/ELEC.jpeg","img/ELEC1.jpeg"],
-    variations: [
-      { label: "Pack élection ", price: 5000 },
-      { label: "Pack élection avec menthe", price: 5500 },
-    ]
-  },
-  {
-    id: 21,
-    name: "Pack douceur",
-    category: "Combo",
-    price: 3500,
-    description: "1plantain Burger 1portion de frites 3bouches plantain 5crepes marbré Un jus de fruit naturel Prix :3500f, 2700f sans boisson ,3300f avec menthe au lait",
-    images: ["img/new.jpeg"],
-    variations: [
-      { label: "Pack douceur complet", price: 3500 },
-      { label: "Pack douceur sans boisson", price: 2700 },
-      { label: "Pack douceur avec menthe au lait", price: 3300 },
-    ]
-  },
-  {
-    id: 1,
-    name: "Bol de crudités",
-    category: "crudités",
-    price: 1000,
-    description: "Bol de crudités avocat 1000f simple 1500f avec œuf dur comcombre oignon et petit pain",
-    images: ["img/Bol de crudités.jpeg", "img/Bol de crudités1.jpeg"],
-    variations: [
-      { label: "Bol de crudités avocat simple", price: 1000 },
-      { label: "+ œuf dur comcombre oignon et petit pain", price: 1500 },
-    ]
-  },
-  {
-    id: 2,
-    name: "Pack gourmand",
-    category: "Combo",
-    price: 3500,
-    description: "1 plantain Burger premium 1portion de fritté de pommes 2 crêpes viande hachée fromage 3bouche plantain Un boisson au choix 3500f sans boisson 4mil avec une boisson au choix 4500f avec jus de fruit naturel",
-    images: ["img/Pack gourmand.jpeg", "img/Pack gourmand2.jpeg","img/Pack gourmand1.jpeg"],
-    variations: [
-      { label: "Pack gourmand simple", price: 3500 },
-      { label: "avec une boisson au choix", price: 4000 },
-      { label: "avec jus de fruit naturel ", price: 4500 },
-    ]
-  },
-  {
-    id: 3,
-    name: "délice gâteaux",
-    category: "patisséries",
-    price: 2500,
-    description: "Tarif gâteaux Marbre 3000f Orange 2500f Au citron 2500f Chocolat 3000f Noix de coco 3000f Nature 2500f Autre parfum 3mil Les Délices de Barbie Bonne dégustation",
-    images: ["img/cake1.jpeg", "img/cake2.jpeg","img/cake3.jpeg"],
-    variations: [
-      { label: "gâteaux Nature ", price: 2500 },
-      { label: "gâteaux Au citron ", price: 2500 },
-      { label: "gâteaux a l'Orange  ", price: 2500 },
-      { label: "gâteaux au  Chocolat ", price: 3000 },
-      { label: "gâteaux au  Noix de coco ", price: 3000 },
-      { label: "gâteaux Autre parfum ", price: 3000 },
-    ]
-  },
-  {
+   {
     id: 4,
     name: "Pastels Précuit & Cuit ",
     category: "patisséries",
@@ -125,19 +18,20 @@ const products = [
     ]
   },
   {
-    id: 5,
-    name: "Pack prestige",
-    category: "Combo",
-    price: 4500,
-    description: "1 plantain Burger premium 2 crêpes viande hachée fromage 1 crêpe pané 3broiche viande 1 Portion de frites +une boisson au choix Prix 4500f sans boisson 5mil avec une boisson au 5500f avec jus de fruits naturels",
-    images: ["img/packtera.jpeg"],
+    id: 7,
+    name: "Tarif Nems ",
+    category: "Nems",
+    price: 150,
+    description: "poisson 150f,viande 150f,Feuilles de nems 10_500f,Commande minimum 10pieces,Précuit 125f et 100frs a partir de 30 précuit",
+    images: ["img/tune.jpeg","img/nems.jpeg"],
     variations: [
-      { label: "Pack prestige ", price: 4500 },
-      { label: "Pack prestige avec une boisson", price: 5000 },
-      { label: "Pack prestige avec jus de fruits naturels", price: 5500 }
+      { label: "Nems poisson ", price: 150 },
+      { label: "Nems viande  ", price: 150 },
+      { label: "Nems precuit ", price: 125 },
+      { label: "Feuilles de nems 10 a 500f", price: 500 }
     ]
   },
-  {
+   {
     id: 6,
     name: "Mini pizza",
     category: "Pizza",
@@ -146,17 +40,59 @@ const products = [
     images: ["img/pizza.jpeg","img/Minipacker.jpeg","img/mini pizza.jpeg"],
   },
   {
-    id: 7,
-    name: "Tarif Nems ",
-    category: "Nems",
-    price: 1500,
-    description: "poisson 150f,viande 150f,Feuilles de nems 10_500f,Commande minimum 10pieces,Précuit 125f et 100frs a partir de 30 précuit",
-    images: ["img/tune.jpeg","img/nems.jpeg"],
+    id: 14,
+    name: "cheese Burger",
+    category: "Combo",
+    price: 500,
+    description: "Cheese Burger -Mini 500f -xl 1000f Supplément frittes de pommes 500f",
+    images:  ["img/burger2.jpeg","img/burger.jpeg","img/burger1.jpeg"],
     variations: [
-      { label: "Nems poisson 150f ", price: 1500 },
-      { label: "Nems viande 150f ", price: 1500 },
-      { label: "Nems precuit 125f", price: 1250 },
-      { label: "Feuilles de nems 10 a 500f", price: 500 }
+      { label: "Cheese Burger Mini", price: 500 },
+       { label: "Cheese Burger Mini Supplément frittes de pommes", price: 1000 },
+      { label: "Cheese Burger xl", price: 1000 },
+      { label: "Cheese Burger xl Supplément frittes de pommes", price: 1500 }
+    ]
+  },
+  {
+    id: 10,
+    name: " Boisson au lait",
+    category: "Boisson",
+    price: 500,
+    description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande",
+    images:  ["img/baoba.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
+    variations: [
+      { label: "Menthe au lait 0.5l ", price: 500 },
+      { label: "Menthe au lait 1l", price: 1000 },
+      { label: "Menthe au lait 1.5l  ", price: 1500 },
+      { label: "Baobab au lait 0.5l", price: 700 },
+      { label: "Baobab au lait 1l", price: 1300 }
+    ]
+  },
+   {
+    id: 18,
+    name: "Hamburger  ",
+    category: "Combo",
+    price: 600,
+    description: "Hamburger 600f unité Supplément frittes 500f",
+    images:  ["img/pane3.jpeg","img/pane4.jpeg"],
+    variations: [
+      { label: "Hamburger 600f unité", price: 600},
+      { label: "Hamburger 600f unité Supplément frittes 500f", price: 1100 },
+      { label: "Supplément frittes 500f", price: 500 }
+    ]
+  },
+  {
+    id: 14,
+    name: "plantain Burger",
+    category: "Combo",
+    price: 1000,
+    description: "-1000f sans fromage -1500f avec fromage - Supplément frittes de pommes 500f ",
+    images:  ["img/sandplan2.jpeg","img/sandplan3.jpeg"],
+    variations: [
+      { label: "sans fromage", price: 1000 },
+      { label: "avec fromage", price: 1500 },
+      { label: "sans fromage Supplément frittes de pommes", price: 1500 },
+      { label: "sans fromage Supplément frittes de pommes", price: 2000 }
     ]
   },
   {
@@ -179,7 +115,7 @@ const products = [
       { label: "crepe poulet fromage pané", price: 1200 }
     ]
   },
-  {
+   {
     id: 9,
     name: "Tarif apéritif",
     category: "apéritif",
@@ -203,6 +139,18 @@ const products = [
     ]
   },
   {
+    id: 1,
+    name: "Bol de crudités",
+    category: "crudités",
+    price: 1000,
+    description: "Bol de crudités avocat 1000f simple 1500f avec œuf dur comcombre oignon et petit pain",
+    images: ["img/Bol de crudités.jpeg", "img/Bol de crudités1.jpeg"],
+    variations: [
+      { label: "Bol de crudités avocat simple", price: 1000 },
+      { label: "+ œuf dur comcombre oignon et petit pain", price: 1500 },
+    ]
+  },
+  {
     id: 10,
     name: " Boisson détox",
     category: "Boisson",
@@ -218,21 +166,7 @@ const products = [
       { label: "Boisson détox 1.5l vert  ", price: 3000 }
     ]
   },
-  {
-    id: 10,
-    name: " Boisson au lait",
-    category: "Boisson",
-    price: 500,
-    description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande",
-    images:  ["img/baoba.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
-    variations: [
-      { label: "Menthe au lait 0.5l ", price: 500 },
-      { label: "Menthe au lait 1l", price: 1000 },
-      { label: "Menthe au lait 1.5l  ", price: 1500 },
-      { label: "Baobab au lait 0.5l", price: 700 },
-      { label: "Baobab au lait 1l", price: 1300 }
-    ]
-  },
+  
   {
     id: 10,
     name: " Jus de fruits naturelles ",
@@ -252,26 +186,55 @@ const products = [
       { label: "jus de corosol  1l", price: 1500 }
     ]
   },
-  {
-    id: 11,
-    name: " Pack salé ",
+    {
+    id: 26,
+    name: "Egg cheese burger ",
     category: "Combo",
-    price: 3500,
-    description: "Premium plantain et cheese  Burger Une mini pizza / une portion de frites  3pastels viande hachée  1boissons au choix (menthe ou baobab au lait  ) Prix 4mil 3500f sans boisson",
-    images:  ["img/pack sale1.jpeg","img/pack sale.jpeg","img/Pack salé.jpeg", "img/packyamo.jpeg","img/packyam1.jpeg"],
+    price: 2000,
+    description: "Egg cheese burger ",
+    images: ["img/egg cheese.jpeg"],
+  },
+   {
+    id: 20,
+    name: "Gamelle pour cérémonie  ",
+    category: "Combo",
+    price: 2500,
+    description: "poulet,poisson,chips,Boulettes miondo,nems,Oeuf dur 2500frs a partir de 10pieces et 2000frs a partir de 50pieces",
+    images:  ["img/recep.jpeg","img/recep1.jpeg"],
     variations: [
-      { label: "Pack salé simple", price: 3500 },
-      { label: "Pack salé + 1boissons (menthe au lait)", price: 4000 },
-      { label: "Pack salé + 1boissons (boabab au lait)", price: 4000 }
+      { label: "2500frs a partir de 10pieces", price: 2500},
+      { label: " 2000frs a partir de 50pieces", price: 2000},
     ]
   },
   {
-    id: 12,
-    name: " Pack anniversaire  ",
+    id: 3,
+    name: "délice gâteaux",
+    category: "patisséries",
+    price: 2500,
+    description: "Tarif gâteaux Marbre 3000f Orange 2500f Au citron 2500f Chocolat 3000f Noix de coco 3000f Nature 2500f Autre parfum 3mil Les Délices de Barbie Bonne dégustation",
+    images: ["img/cake1.jpeg", "img/cake2.jpeg","img/cake3.jpeg"],
+    variations: [
+      { label: "gâteaux Nature ", price: 2500 },
+      { label: "gâteaux Au citron ", price: 2500 },
+      { label: "gâteaux a l'Orange  ", price: 2500 },
+      { label: "gâteaux au  Chocolat ", price: 3000 },
+      { label: "gâteaux au  Noix de coco ", price: 3000 },
+      { label: "gâteaux Autre parfum ", price: 3000 },
+    ]
+  },
+  {
+    id: 17,
+    name: "poulet pané  ",
     category: "Combo",
-    price: 12000,
-    description: "Pack anniversaire 1gateau au choix 20nems 30crepes nature et choco 10 Schott eggs 12mil",
-    images:  ["img/pack-carton.jpeg"],
+    price: 3000,
+    description: "Tarifs poulet pané 3 morceaux +frittes _3mil 5 morceaux+frittes _5000f 10morceaux + frittes _8000f Supplément frittes 500f",
+    images:  ["img/fffff.jpeg","img/pouletp.jpeg",],
+    variations: [
+      { label: "poulet pané 3 morceaux +frittes", price: 3000 },
+      { label: "poulet pané 5 morceaux + frittes", price: 5000 },
+      { label: "poulet pané 10morceaux + frittes", price: 8000 },
+      { label: " Supplément frittes 500f", price: 500 },
+    ]
   },
   {
     id: 13,
@@ -287,34 +250,7 @@ const products = [
       { label: "1 entier avec frittes Supplement Frites de pommes où plantain", price: 10000 }
     ]
   },
-  {
-    id: 14,
-    name: "plantain Burger",
-    category: "Combo",
-    price: 1000,
-    description: "-1000f sans fromage -1500f avec fromage - Supplément frittes de pommes 500f ",
-    images:  ["img/sandplan2.jpeg","img/sandplan3.jpeg"],
-    variations: [
-      { label: "sans fromage", price: 1000 },
-      { label: "avec fromage", price: 1500 },
-      { label: "sans fromage Supplément frittes de pommes", price: 1500 },
-      { label: "sans fromage Supplément frittes de pommes", price: 2000 }
-    ]
-  },
-  {
-    id: 14,
-    name: "cheese Burger",
-    category: "Combo",
-    price: 500,
-    description: "Cheese Burger -Mini 500f -xl 1000f Supplément frittes de pommes 500f",
-    images:  ["img/burger2.jpeg","img/burger.jpeg","img/burger1.jpeg"],
-    variations: [
-      { label: "Cheese Burger Mini", price: 500 },
-       { label: "Cheese Burger Mini Supplément frittes de pommes", price: 1000 },
-      { label: "Cheese Burger xl", price: 1000 },
-      { label: "Cheese Burger xl Supplément frittes de pommes", price: 1500 }
-    ]
-  },
+  
   {
     id: 15,
     name: "Pack délice",
@@ -327,7 +263,47 @@ const products = [
        { label: "Pack délice simple + Boisson au choix", price: 3500 }
     ]
   },
+   {
+    id: 21,
+    name: "Pack douceur",
+    category: "Combo",
+    price: 3500,
+    description: "1plantain Burger 1portion de frites 3bouches plantain 5crepes marbré Un jus de fruit naturel Prix :3500f, 2700f sans boisson ,3300f avec menthe au lait",
+    images: ["img/new.jpeg"],
+    variations: [
+      { label: "Pack douceur complet", price: 3500 },
+      { label: "Pack douceur sans boisson", price: 2700 },
+      { label: "Pack douceur avec menthe au lait", price: 3300 },
+    ]
+  },
+  
   {
+    id: 2,
+    name: "Pack gourmand",
+    category: "Combo",
+    price: 3500,
+    description: "1 plantain Burger premium 1portion de fritté de pommes 2 crêpes viande hachée fromage 3bouche plantain Un boisson au choix 3500f sans boisson 4mil avec une boisson au choix 4500f avec jus de fruit naturel",
+    images: ["img/Pack gourmand.jpeg", "img/Pack gourmand2.jpeg","img/Pack gourmand1.jpeg"],
+    variations: [
+      { label: "Pack gourmand simple", price: 3500 },
+      { label: "avec une boisson au choix", price: 4000 },
+      { label: "avec jus de fruit naturel ", price: 4500 },
+    ]
+  },
+  {
+    id: 11,
+    name: " Pack salé ",
+    category: "Combo",
+    price: 3500,
+    description: "Premium plantain et cheese  Burger Une mini pizza / une portion de frites  3pastels viande hachée  1boissons au choix (menthe ou baobab au lait  ) Prix 4mil 3500f sans boisson",
+    images:  ["img/pack sale1.jpeg","img/pack sale.jpeg","img/Pack salé.jpeg", "img/packyamo.jpeg","img/packyam1.jpeg"],
+    variations: [
+      { label: "Pack salé simple", price: 3500 },
+      { label: "Pack salé + 1boissons (menthe au lait)", price: 4000 },
+      { label: "Pack salé + 1boissons (boabab au lait)", price: 4000 }
+    ]
+  },
+   {
     id: 16,
     name: "Pack découverte ",
     category: "Combo",
@@ -336,30 +312,41 @@ const products = [
     images:  ["img/precu.jpeg"],
   },
   {
-    id: 17,
-    name: "poulet pané  ",
+    id: 5,
+    name: "Pack prestige",
     category: "Combo",
-    price: 3000,
-    description: "Tarifs poulet pané 3 morceaux +frittes _3mil 5 morceaux+frittes _5000f 10morceaux + frittes _8000f Supplément frittes 500f",
-    images:  ["img/fffff.jpeg","img/pane.jpeg","img/pouletp.jpeg",],
+    price: 4500,
+    description: "1 plantain Burger premium 2 crêpes viande hachée fromage 1 crêpe pané 3broiche viande 1 Portion de frites +une boisson au choix Prix 4500f sans boisson 5mil avec une boisson au 5500f avec jus de fruits naturels",
+    images: ["img/packtera.jpeg"],
     variations: [
-      { label: "poulet pané 3 morceaux +frittes", price: 3000 },
-      { label: "poulet pané 5 morceaux + frittes", price: 5000 },
-      { label: "poulet pané 10morceaux + frittes", price: 8000 },
-      { label: " Supplément frittes 500f", price: 500 },
+      { label: "Pack prestige ", price: 4500 },
+      { label: "Pack prestige avec une boisson", price: 5000 },
+      { label: "Pack prestige avec jus de fruits naturels", price: 5500 }
     ]
   },
   {
-    id: 18,
-    name: "Hamburger  ",
+    id: 22,
+    name: "Pack élection",
     category: "Combo",
-    price: 600,
-    description: "Hamburger 600f unité Supplément frittes 500f",
-    images:  ["img/pane3.jpeg","img/pane4.jpeg"],
+    price: 5000,
+    description: "2morceaux de poulet pané+frittes 2crepes viande hachée fromage 1burger5crepes Nature 1bouteille de menthe Prix 5500f avec menthe5000f sans menthe",
+    images: ["img/ELEC.jpeg","img/ELEC1.jpeg"],
     variations: [
-      { label: "Hamburger 600f unité", price: 600},
-      { label: "Hamburger 600f unité Supplément frittes 500f", price: 1100 },
-      { label: "Supplément frittes 500f", price: 500 }
+      { label: "Pack élection ", price: 5000 },
+      { label: "Pack élection avec menthe", price: 5500 },
+    ]
+  },
+  {
+    id: 24,
+    name: "Pack caviar",
+    category: "Combo",
+    price: 5100,
+    description: "1/4 poulet mayo 1bol de crudités1mini burger et un hamburger 1bouteille de menthe au laitOu 1bouteille de jus de fruits naturel_Prix 5100f sans boisson 5600f avec menthe6mil avec jus de fruits naturel_",
+    images: ["img/CAVI.jpeg","img/CAVI1.jpeg"],
+    variations: [
+      { label: "Pack caviar", price: 5100 },
+      { label: "Pack caviar avec menthe", price: 5600 },
+      { label: "Pack caviar avec jus de fruit naturel", price: 6000 },
     ]
   },
   {
@@ -371,17 +358,35 @@ const products = [
     images:  ["img/pack visite.jpeg","img/pack visite1.jpeg"],
   },
   {
-    id: 20,
-    name: "Gamelle pour cérémonie  ",
+    id: 23,
+    name: "Pack premium",
     category: "Combo",
-    price: 2500,
-    description: "poulet,poisson,chips,Boulettes miondo,nems,Oeuf dur 2500frs a partir de 10pieces et 2000frs a partir de 50pieces",
-    images:  ["img/recep.jpeg","img/recep1.jpeg"],
+    price: 9000,
+    description: "1/4Poulet mayo+frites 3morceaux de poulet pané+frites1pack délice1jus de fruitOu une 1bouteille de menthe_Prix 9mil avec menthe 9500f avec jus de fruit naturel_",
+    images: ["img/PREM1.jpeg","img/PREM.jpeg"],
     variations: [
-      { label: "2500frs a partir de 10pieces", price: 2500},
-      { label: " 2000frs a partir de 50pieces", price: 2000},
+      { label: "Pack premium", price: 9000 },
+      { label: "Pack premium avec jus de fruit naturel", price: 9500 },
     ]
   },
+ 
+    {
+    id: 25,
+    name: "Pack Gold",
+    category: "Combo",
+    price: 10000,
+    description: "Pack Gold 1/4Poulet mayo 2egg cheese burger 4crepes viande hachée fromage 1bouteille de menthe",
+    images: ["img/pack gold.jpeg","img/pack gold1.jpeg"],
+  },
+  {
+    id: 12,
+    name: " Pack anniversaire  ",
+    category: "Combo",
+    price: 12000,
+    description: "Pack anniversaire 1gateau au choix 20nems 30crepes nature et choco 10 Schott eggs 12mil",
+    images:  ["img/pack-carton.jpeg"],
+  },
+ 
 ];
 
 let cart = [];
