@@ -68,13 +68,25 @@ const products = [
       { label: "Baobab au lait 1l", price: 1300 }
     ]
   },
+  {
+    id: 31,
+    name: " Eouf Pané",
+    category: "combo",
+    price: 500,
+    description: "eouf pané a la viande hachée 500frs l'unité, la gamelle avec les frites 2000frs.",
+    images:  ["img/ep.jpeg","img/ep1.jpeg","img/ep3.jpeg"],
+    variations: [
+      { label: "eouf pané a la viande hachée", price: 500 },
+      { label: "la gamelle avec les frites", price: 2000 }
+    ]
+  },
    {
     id: 18,
     name: "Hamburger  ",
     category: "Combo",
     price: 600,
     description: "Hamburger 600f unité Supplément frittes 500f",
-    images:  ["img/pane3.jpeg","img/pane4.jpeg"],
+    images:  ["img/pane3.jpeg","img/pane4.jpeg","img/ham.jpeg"],
     variations: [
       { label: "Hamburger 600f unité", price: 600},
       { label: "Hamburger 600f unité Supplément frittes 500f", price: 1100 },
@@ -184,6 +196,19 @@ const products = [
       { label: "mangue ananas  0.5l ", price: 1000 },
       { label: "jus de corosol  0.5l", price: 1000 },
       { label: "jus de corosol  1l", price: 1500 }
+    ]
+  },
+  {
+    id: 30,
+    name: " crêpes panés ",
+    category: "patisséries",
+    price: 1000,
+    description: "-crepe viande hachée fromage 1000f _3 a 2800f - crepe poulet fromage pané 1200f unité_#Les Délices de Barbie_Bonne dégustation ",
+    images:  ["img/cp.jpeg"],
+    variations: [
+      { label: "crepe viande hachée fromage", price: 1000 },
+      { label: "3 X (crepe viande hachée fromage)", price: 2800 },
+      { label: "crepe poulet fromage pané", price: 1200 }
     ]
   },
     {
@@ -385,6 +410,14 @@ const products = [
     price: 12000,
     description: "Pack anniversaire 1gateau au choix 20nems 30crepes nature et choco 10 Schott eggs 12mil",
     images:  ["img/pack-carton.jpeg"],
+  },
+  {
+    id: 32,
+    name: " Pack sucré  ",
+    category: "Combo",
+    price: 14500,
+    description: "50crepes mix 1Gâteau marbré 6mini cakes 5l de menthe au lait Prix 14500f",
+    images:  ["img/ps.jpeg","img/ps1.jpeg"],
   },
  
 ];
