@@ -48,6 +48,7 @@ const products = [
     images:  ["img/burger2.jpeg","img/burger.jpeg","img/burger1.jpeg"],
     variations: [
       { label: "Cheese Burger Mini", price: 500 },
+      { label: "Cheese Burger Moyen", price: 750 },
        { label: "Cheese Burger Mini Supplément frittes de pommes", price: 1000 },
       { label: "Cheese Burger xl", price: 1000 },
       { label: "Cheese Burger xl Supplément frittes de pommes", price: 1500 }
