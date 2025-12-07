@@ -59,7 +59,7 @@ const products = [
     category: "Boisson",
     price: 500,
     description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande",
-    images:  ["img/baoba.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
+    images:  ["img/j2.jpeg","img/baoba.jpeg","img/baoba1.jpeg","img/mente.jpeg"],
     variations: [
       { label: "Menthe au lait 0.5l ", price: 500 },
       { label: "Menthe au lait 1l", price: 1000 },
@@ -113,7 +113,7 @@ const products = [
     category: "crêpes",
     price: 1000,
     description: "10 crêpes nature 1000f ---10 crêpes au chocolat 1500f---- | ----10 crêpes au lait 1500f--- | ---10crepes marbré 1500f--- | ---supplement chocolat 300f--- | ---1crepes viande hachée fromage 500f--- |--- crepe pané 1000f _3 a 2500f--- | ---crepe poulet fromage 800f--- | ---crepe poulet fromage pané 1200f unité--- | #Les Délices de Barbie Bonne dégustation",
-    images:  ["img/crepa.jpeg", "img/crepa1.jpeg", "img/crepes.jpeg", "img/crepes choco1.jpeg", "img/crepes choco.jpeg"],
+    images:  ["img/crepa.jpeg", "img/crepa1.jpeg", "img/crepes.jpeg", "img/crepes choco1.jpeg", "img/crepes choco.jpeg","img/cr1.jpeg"],
     variations: [
       { label: "10 crêpes nature", price: 1000 },
       { label: "10 crêpes au chocolat ", price: 1500 },
@@ -185,7 +185,7 @@ const products = [
     category: "Boisson",
     price: 1000,
     description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande.NB ; les saveurs varie en fonction des saisons ",
-    images:  ["img/jusa1.jpeg", "img/jus collection.jpeg","img/jus a2.jpeg"],
+    images:  ["img/jusa1.jpeg", "img/jus collection.jpeg","img/jus a2.jpeg","img/j1.jpeg"],
     variations: [
       { label: "Cocktail (Ananas pastèque papaye) 0.5l", price: 1000 },
       { label: "Cocktail (Ananas Cassis) 0.5l", price: 1000 },
@@ -347,6 +347,18 @@ const products = [
       { label: "Pack prestige ", price: 4500 },
       { label: "Pack prestige avec une boisson", price: 5000 },
       { label: "Pack prestige avec jus de fruits naturels", price: 5500 }
+    ]
+  },
+
+  {
+    id: 123,
+    name: "Box poulet",
+    category: "Combo",
+    price: 5000,
+    description: "Box poulet :1/4Poulet mayo , poulet pané + frittes ",
+    images: ["img/box.jpeg"],
+    variations: [
+      { label: "Box poulet ", price: 5000 }
     ]
   },
   {
