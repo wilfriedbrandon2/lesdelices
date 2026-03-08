@@ -4,6 +4,34 @@
 
 // Sample products
 const products = [
+
+   {
+    id: 112,
+    name: "Patte a crêpes ",
+    category: "patisséries",
+    price: 1000,
+    description: "Patte a crêpes 4saveurs Orange 1200f _0,5 | Vanille 1000f_0,5l | Chocolat 2500f _1l | Nature 2000f _1l",
+    images: ["img/pate.jpeg", "img/pate1.jpeg"],
+    variations: [
+      { label: "Vanille _0,5l ", price: 1000 },
+      { label: "Orange  _0,5 ", price: 1200 },
+      { label: "Nature  _1l", price: 2000 },
+      { label: "Chocolat  _1l", price: 2500 },
+    ]
+  },
+   {
+    id: 113,
+    name: "Mais arachides grille ",
+    category: "apéritif",
+    price: 800,
+    description: "Mais arachides grille disponible 0,5l_800f 1l _1500f 1,5_ 2200f",
+    images: ["img/mix.jpeg", "img/mix1.jpeg", "img/mix3.jpeg"],
+    variations: [
+      { label: "Bouteille _0,5l ", price: 800 },
+      { label: "Bouteille _1l", price: 1500 },
+      { label: "Nature  _1,5l", price: 2200 },
+    ]
+  },
    {
     id: 4,
     name: "Pastels Précuit & Cuit ",
@@ -45,7 +73,7 @@ const products = [
     category: "Combo",
     price: 500,
     description: "Cheese Burger -Mini 500f -xl 1000f Supplément frittes de pommes 500f",
-    images:  ["img/burger2.jpeg","img/burger.jpeg","img/burger1.jpeg"],
+    images:  ["img/bnew1.jpeg","img/burger2.jpeg","img/bnew.jpeg","img/burger1.jpeg"],
     variations: [
       { label: "Cheese Burger Mini", price: 500 },
       { label: "Cheese Burger Moyen", price: 750 },
@@ -490,8 +518,10 @@ function renderProducts(list) {
       <div class="card-body">
         <h3>${p.name}</h3>
         <p class="muted">${p.description.substring(0, 60)}...</p>
-        <div class="price">${p.price} FCFA</div>
-        <button class="btn small add">Ajouter</button>
+        <div class="card-footer">
+          <div class="price">${p.price} FCFA</div>
+          <button class="btn small add icon-add">+</button>
+        </div>
       </div>
     `;
     // open details on eye or image click
@@ -743,8 +773,56 @@ if (isIos() && !isInStandaloneMode()) {
   document.getElementById("pwa-ios-hint").style.display = "block";
 }
 
+// Hero Slider Functionality
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
 
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
+  currentSlide = index;
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => showSlide(index));
+});
+
+// Auto slide every 5 seconds
+setInterval(nextSlide, 5000);
 
 function refreshApp() {
-    window.location.reload();
+    const alertModal = document.getElementById('customAlert');
+    alertModal.classList.add('show');
+    alertModal.setAttribute('aria-hidden', 'false');
 }
+
+document.getElementById('alertCancel').addEventListener('click', () => {
+    const alertModal = document.getElementById('customAlert');
+    alertModal.classList.remove('show');
+    alertModal.setAttribute('aria-hidden', 'true');
+});
+
+document.getElementById('alertConfirm').addEventListener('click', () => {
+    window.location.reload();
+});
+
+window.addEventListener('beforeunload', function(e) {
+    e.preventDefault();
+    e.returnValue = "Attention: Actualiser la page supprimera tous les articles de votre panier.";
+});
+
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.add('hide');
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 500);
+});

@@ -20,6 +20,8 @@
 
 
   <link rel="manifest" href="manifest.json" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- app header bg -->
  <meta name="theme-color" content="#ff3d6c">
 
@@ -27,6 +29,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <img src="img/logo.png" alt="Les Délices de Barbie" class="preloader-logo">
+      <div class="preloader-spinner"></div>
+    </div>
+  </div>
+
   <!-- Header -->
   <header class="site-header">
     <div class="wrap">
@@ -83,7 +93,7 @@
       2. Puis sélectionnez <strong>Ajouter à l’écran d’accueil</strong>
     </div>
     <div class="refresh-button" onclick="refreshApp()">
-    <i class="refresh-icon">🔄</i> <!-- You can replace this with an SVG or Font Awesome icon -->
+    <i class="fas fa-refresh"></i>
     </div>
 
 
@@ -97,35 +107,37 @@
   <!-- Product Details Modal -->
 <div id="detailsModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Détails du produit">
   <div class="sheet">
-    <button class="icon-btn close" id="closeDetails" aria-label="Fermer">✕</button>
-    <div class="details-layout">
-      <div class="carousel">
-        <img id="detailImg" alt="" loading="lazy" />
-        <button class="icon-btn prev" id="prevImg" aria-label="Précédent">‹</button>
-        <button class="icon-btn next" id="nextImg" aria-label="Suivant">›</button>
-        <div class="thumbs" id="thumbs"></div>
-      </div>
-      <div class="details">
-        <h3 id="detailName"></h3>
-        <div class="detail-meta">
-          <span id="detailCat" class="chip"></span>
-          <strong id="detailPrice" class="price"></strong>
+    <div class="wrap">
+      <button class="icon-btn close" id="closeDetails" aria-label="Fermer">✕</button>
+      <div class="details-layout">
+        <div class="carousel">
+          <img id="detailImg" alt="" loading="lazy" />
+          <button class="icon-btn prev" id="prevImg" aria-label="Précédent">‹</button>
+          <button class="icon-btn next" id="nextImg" aria-label="Suivant">›</button>
+          <div class="thumbs" id="thumbs"></div>
         </div>
+        <div class="details">
+          <h3 id="detailName"></h3>
+          <div class="detail-meta">
+            <span id="detailCat" class="chip"></span>
+            <strong id="detailPrice" class="price"></strong>
+          </div>
 
-        <!-- ⬇️ INSERT VARIATIONS DROPDOWN HERE -->
-        <div id="variationBox" class="variation-box" style="margin: 10px 0; display: none;">
-          <label for="variationSelect">Options :</label>
-          <select id="variationSelect"></select>
-        </div>
-        <!-- ⬆️ END VARIATIONS -->
+          <!-- ⬇️ INSERT VARIATIONS DROPDOWN HERE -->
+          <div id="variationBox" class="variation-box" style="margin: 10px 0; display: none;">
+            <label for="variationSelect">Options :</label>
+            <select id="variationSelect"></select>
+          </div>
+          <!-- ⬆️ END VARIATIONS -->
 
-        <p id="detailDesc"></p>
-        <div class="qty-box">
-         <label for="detailQty">Quantité:</label>
+          <p id="detailDesc"></p>
+          <div class="qty-box">
+           <label for="detailQty">Quantité:</label>
          <input type="number" id="detailQty" min="1" value="1" style="font-size: 16px;"/>
         </div>
         <button class="btn primary" id="detailAdd">Ajouter au panier</button>
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -180,6 +192,19 @@
       <small class="muted">Le message s’ouvre dans WhatsApp pour confirmation.</small>
     </footer>
   </aside>
+
+  <!-- Custom Alert Modal -->
+  <div id="customAlert" class="custom-alert" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Alerte personnalisée">
+    <div class="alert-content">
+      <img src="img/logo.png" alt="Les Délices de Barbie" class="alert-logo">
+      <h3>Attention</h3>
+      <p>Actualiser la page supprimera tous les articles de votre panier. Voulez-vous continuer ?</p>
+      <div class="alert-buttons">
+        <button class="btn outline" id="alertCancel">Annuler</button>
+        <button class="btn primary" id="alertConfirm">Continuer</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer id="contact" class="footer">
