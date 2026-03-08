@@ -819,7 +819,7 @@ window.addEventListener('beforeunload', function(e) {
     e.returnValue = "Attention: Actualiser la page supprimera tous les articles de votre panier.";
 });
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
     preloader.classList.add('hide');
     setTimeout(() => {
