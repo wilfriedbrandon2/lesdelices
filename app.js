@@ -512,7 +512,7 @@ function renderProducts(list) {
     card.className = "card";
     card.innerHTML = `
       <div class="card-img">
-        <img src="${p.images[0]}" alt="${p.name}" />
+        <img src="${p.images[0]}" alt="${p.name}" loading="lazy" />
         <button class="icon-btn eye" aria-label="Voir détails">👁</button>
       </div>
       <div class="card-body">

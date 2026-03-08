@@ -13,6 +13,10 @@
   <link rel="apple-touch-icon" sizes="167x167" href="icons/logo-167.png">
   <link rel="apple-touch-icon" sizes="120x120" href="icons/logo-120.png">
 
+  <!-- Preload critical images -->
+  <link rel="preload" href="img/logo.png" as="image">
+  <link rel="preload" href="img/hero.jpg" as="image">
+
   <!-- Make PWA full screen on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -33,7 +37,10 @@
   <div id="preloader">
     <div class="preloader-content">
       <img src="img/logo.png" alt="Les Délices de Barbie" class="preloader-logo">
-      <div class="preloader-spinner"></div>
+      <p class="preloader-text">Préparation du contenu pour une visibilité optimale...</p>
+      <div class="preloader-progress">
+        <div class="progress-bar"></div>
+      </div>
     </div>
   </div>
 

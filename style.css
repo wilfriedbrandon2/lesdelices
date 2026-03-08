@@ -35,7 +35,10 @@ a{ color:inherit; text-decoration: none; }
   visibility: hidden;
 }
 .preloader-content {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .preloader-logo {
   width: 100px;
@@ -43,32 +46,36 @@ a{ color:inherit; text-decoration: none; }
   margin-bottom: 20px;
   animation: pulse 1.5s infinite;
 }
-.preloader-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #ff3d6c;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.preloader-text {
+  margin: 10px 0 20px;
+  color: #666;
+  font-size: 14px;
+}
+.preloader-progress {
+  width: 200px;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
   margin: 0 auto;
 }
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+.progress-bar {
+  height: 100%;
+  background: #ff3d6c;
+  width: 0%;
+  animation: progress 3s ease-in-out forwards;
 }
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
 }
 @media (max-width: 768px) {
   .preloader-logo {
     width: 80px;
     height: 80px;
   }
-  .preloader-spinner {
-    width: 30px;
-    height: 30px;
+  .preloader-progress {
+    width: 150px;
   }
 }
 
