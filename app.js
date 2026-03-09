@@ -25,7 +25,7 @@ const products = [
     category: "apéritif",
     price: 800,
     description: "Mais arachides grille disponible 0,5l_800f 1l _1500f 1,5_ 2200f",
-    images: ["img/mix.jpeg", "img/mix1.jpeg", "img/mix3.jpeg"],
+    images: ["img/mix3.jpeg","img/mix1.jpeg","img/mix.jpeg"],
     variations: [
       { label: "Bouteille _0,5l ", price: 800 },
       { label: "Bouteille _1l", price: 1500 },
@@ -73,7 +73,7 @@ const products = [
     category: "Combo",
     price: 500,
     description: "Cheese Burger -Mini 500f -xl 1000f Supplément frittes de pommes 500f",
-    images:  ["img/burger2.jpeg","img/burger.jpeg","img/burger1.jpeg"],
+    images:  ["img/bnew.jpeg","img/bnew1.jpeg","img/burger1.jpeg"],
     variations: [
       { label: "Cheese Burger Mini", price: 500 },
       { label: "Cheese Burger Moyen", price: 750 },
