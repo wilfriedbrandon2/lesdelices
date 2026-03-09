@@ -214,7 +214,7 @@ const products = [
     category: "Boisson",
     price: 1000,
     description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande.NB ; les saveurs varie en fonction des saisons ",
-    images:  ["img/jusa1.jpeg", "img/jus collection.jpeg","img/jus a2.jpeg","img/j1.jpeg"],
+    images:  ["img/jj.jpeg","img/jj1.jpeg","img/jj2.jpeg","img/jj3.jpeg","img/jusa1.jpeg", "img/jus collection.jpeg","img/jus a2.jpeg","img/j1.jpeg"],
     variations: [
       { label: "Cocktail (Ananas pastèque papaye) 0.5l", price: 1000 },
       { label: "Cocktail (Ananas Cassis) 0.5l", price: 1000 },
