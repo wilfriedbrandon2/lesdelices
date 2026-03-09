@@ -710,6 +710,9 @@ input, select, textarea {
   gap: 10px;
   justify-content: center;
 }
+.alert-buttons .btn {
+  flex: 1;
+}
 @media (max-width: 480px) {
   .alert-content {
     padding: 15px;
@@ -717,6 +720,13 @@ input, select, textarea {
   .alert-logo {
     width: 50px;
     height: 50px;
+  }
+  .alert-buttons {
+    flex-direction: column;
+  }
+  .alert-buttons .btn {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
