@@ -4,7 +4,17 @@
 
 // Sample products
 const products = [
-
+  {
+    id: 128,
+    name: "Pack festiv",
+    category: "combo",
+    price: 15000,
+    description: "Pack festiv 25mini burger 30nems 15mil",
+    images: ["img/festiv.jpeg", "img/festiv1.jpeg", "img/festiv2.jpeg", "img/festiv3.jpeg"],
+    variations: [
+      { label: "25 mini burger 30nems ", price: 15000 },
+    ]
+  },
    {
     id: 112,
     name: "Patte a crêpes ",
@@ -94,7 +104,7 @@ const products = [
       { label: "Menthe au lait 1l", price: 1000 },
       { label: "Menthe au lait 1.5l  ", price: 1500 },
       { label: "Baobab au lait 0.5l", price: 700 },
-      { label: "Baobab au lait 1l", price: 1300 }
+      { label: "Baobab au lait 1l", price: 2000 }
     ]
   },
   {
@@ -127,13 +137,13 @@ const products = [
     name: "plantain Burger",
     category: "Combo",
     price: 1000,
-    description: "-1000f sans fromage -1500f avec fromage - Supplément frittes de pommes 500f ",
-    images:  ["img/sandplan2.jpeg","img/sandplan3.jpeg"],
+    description: "1000f sans fromage -1500f avec fromage - Supplément frittes de pommes 500f ",
+    images:  ["img/plantain.jpeg","img/sandplan2.jpeg","img/sandplan3.jpeg"],
     variations: [
       { label: "sans fromage", price: 1000 },
       { label: "avec fromage", price: 1500 },
       { label: "sans fromage Supplément frittes de pommes", price: 1500 },
-      { label: "sans fromage Supplément frittes de pommes", price: 2000 }
+      { label: "Avec fromage Supplément frittes de pommes", price: 2000 }
     ]
   },
   {
@@ -197,7 +207,7 @@ const products = [
     category: "Boisson",
     price: 1000,
     description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande",
-    images:  ["img/beca.jpeg"],
+    images:  ["img/jj3.jpeg","img/beca.jpeg"],
     variations: [
       { label: "Boisson détox 0.5l Beca", price: 1000 },
       { label: "Boisson détox 1l Beca", price: 1800 },
@@ -213,8 +223,8 @@ const products = [
     name: " Jus de fruits naturelles ",
     category: "Boisson",
     price: 1000,
-    description: "Pour les boissons il ya les jus de fruits naturels  menthe au lait Baobab au lait Le bissap et boisson détox sur commande.NB ; les saveurs varie en fonction des saisons ",
-    images:  ["img/jj.jpeg","img/jj1.jpeg","img/jj2.jpeg","img/jj3.jpeg","img/jusa1.jpeg", "img/jus collection.jpeg","img/jus a2.jpeg","img/j1.jpeg"],
+    description: "Jus de fruit naturel sans sucré sans arôme sans conservateur artificielle",
+    images:  ["img/jj.jpeg","img/jj2.jpeg","img/jusa1.jpeg", "img/jus collection.jpeg","img/jus a2.jpeg","img/j1.jpeg"],
     variations: [
       { label: "Cocktail (Ananas pastèque papaye) 0.5l", price: 1000 },
       { label: "Cocktail (Ananas Cassis) 0.5l", price: 1000 },
@@ -224,7 +234,7 @@ const products = [
       { label: "pasteque ananas 0.5l ", price: 1000 },
       { label: "mangue ananas  0.5l ", price: 1000 },
       { label: "jus de corosol  0.5l", price: 1000 },
-      { label: "jus de corosol  1l", price: 1500 }
+      { label: "jus de corosol  1l", price: 2000 }
     ]
   },
   {
@@ -258,6 +268,18 @@ const products = [
     variations: [
       { label: "2500frs a partir de 10pieces", price: 2500},
       { label: " 2000frs a partir de 50pieces", price: 2000},
+    ]
+  },
+   {
+    id: 220,
+    name: "Gamelle pour cérémonies",
+    category: "Combo",
+    price: 2000,
+    description: "Gamelles pour cérémonies 1500f a partir de 21pieces 2000f unité",
+    images:  ["img/gamelle.jpeg"],
+    variations: [
+      { label: "une(1) Gamelle pour cérémonies", price: 2000},
+      { label: " 21 Gamelles pour cérémonies", price: 31500},
     ]
   },
   {
