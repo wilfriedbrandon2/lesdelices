@@ -4,17 +4,7 @@
 
 // Sample products
 const products = [
-  {
-    id: 128,
-    name: "Pack festiv",
-    category: "combo",
-    price: 15000,
-    description: "Pack festiv 25mini burger 30nems 15mil",
-    images: ["img/festiv.jpeg", "img/festiv1.jpeg", "img/festiv2.jpeg", "img/festiv3.jpeg"],
-    variations: [
-      { label: "25 mini burger 30nems ", price: 15000 },
-    ]
-  },
+  
    {
     id: 112,
     name: "Patte a crêpes ",
@@ -465,6 +455,17 @@ const products = [
     price: 10000,
     description: "Pack Gold 1/4Poulet mayo 2egg cheese burger 4crepes viande hachée fromage 1bouteille de menthe",
     images: ["img/pack gold.jpeg","img/pack gold1.jpeg"],
+  },
+  {
+    id: 128,
+    name: "Pack festiv",
+    category: "combo",
+    price: 15000,
+    description: "Pack festiv 25mini burger 30nems 15mil",
+    images: ["img/festiv.jpeg", "img/festiv1.jpeg", "img/festiv2.jpeg", "img/festiv3.jpeg"],
+    variations: [
+      { label: "25 mini burger 30nems ", price: 15000 },
+    ]
   },
   {
     id: 12,
