@@ -334,12 +334,11 @@ const products = [
     name: "Pack douceur",
     category: "Combo",
     price: 3500,
-    description: "1plantain Burger 1portion de frites 3bouches plantain 5crepes marbré Un jus de fruit naturel Prix :3500f, 2700f sans boisson ,3300f avec menthe au lait",
-    images: ["img/new.jpeg"],
+    description: "le pack douceur 3mini burger 4nems 2crepes viande haché fromage 1menthe au lait 3500f sans boisson 4mil avec menthe au lait",
+    images: ["img/dou.jpeg","img/dou1.jpeg"],
     variations: [
-      { label: "Pack douceur complet", price: 3500 },
-      { label: "Pack douceur sans boisson", price: 2700 },
-      { label: "Pack douceur avec menthe au lait", price: 3300 },
+      { label: "Pack douceur sans boisson", price: 3500 },
+      { label: "Pack douceur avec menthe au lait", price: 4000 },
     ]
   },
   
@@ -435,6 +434,19 @@ const products = [
     description: "20pastels, 1L de cacahuete, 1l de menthe au lait",
     images:  ["img/pack visite.jpeg","img/pack visite1.jpeg"],
   },
+  {
+    id: 123,
+    name: "pack VIP  ",
+    category: "Combo",
+    price: 9000,
+    description: "Pack vip 1/2 poulet mayo +fritte 10nems au choix 5pastels a la viande 10crepes au choix 1jus de fruit naturel Prix _10mil  9mil sans boisson",
+    images:  ["img/vip.jpeg","img/vip1.jpeg","img/vip3.jpeg"],
+     variations: [
+      { label: "pack VIP sans boisson", price: 9000 },
+      { label: "pack VIP  avec jus de fruit naturel", price: 10000 },
+    ]
+  },
+
   {
     id: 23,
     name: "Pack premium",
