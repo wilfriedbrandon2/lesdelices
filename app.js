@@ -38,7 +38,7 @@ const products = [
     category: "patisséries",
     price: 150,
     description: "Précuit 150f unité -Cuit 200f unité -Avec fromage 300f unite Schotteggs //Oeuf écossais  -200f unité  Les Délices de Barbie Bonne dégustation",
-    images: ["img/pili.jpeg", "img/pili2.jpeg", "img/pili4.jpeg","img/pili3.jpeg","img/pili1.jpeg"],
+    images: ["img/pastel121.jpeg","img/pastel122.jpeg","img/pili.jpeg", "img/pili2.jpeg", "img/pili4.jpeg","img/pili3.jpeg","img/pili1.jpeg"],
     variations: [
       { label: "Pastels Précuit ", price: 150 },
       { label: "Pastels Cuit  unité", price: 200 },
@@ -50,12 +50,19 @@ const products = [
     name: "Tarif Nems ",
     category: "Nems",
     price: 150,
-    description: "poisson 150f,viande 150f,Feuilles de nems 10_500f,Commande minimum 10pieces,Précuit 125f et 100frs a partir de 30 précuit",
-    images: ["img/tune.jpeg","img/nems.jpeg"],
+    description: " Nems Précuit - Viande 125f - Poisson 125f- poulet 150f A partir de 50pieces 100f et 125f (poulet) Cuit - Viande et poisson 150f- Viande vermicelle 200f - poulet 200f",
+    images: ["img/tune.jpeg","img/nemss.jpeg"],
     variations: [
-      { label: "Nems poisson ", price: 150 },
-      { label: "Nems viande  ", price: 150 },
-      { label: "Nems precuit ", price: 125 },
+      { label: "Nems cuit poisson ", price: 150 },
+      { label: "Nems cuit viande  ", price: 150 },
+      { label: "Nems cuit Viande vermicelle ", price: 200 },
+      { label: "Nems cuit Viande poulet ", price: 200 },
+      { label: "Nems precuit viande ", price: 125 },
+      { label: "Nems precuit poisson ", price: 125 },
+      { label: "Nems precuit poulet ", price: 150 },
+      { label: "Nems Le pack de 20 précuit", price: 2500 },
+      { label: "Nems Le pack de 40 précuit", price: 5000 },
+      { label: "Nems Le pack de 100 précuit", price: 10000 },
       { label: "Feuilles de nems 10 a 500f", price: 500 }
     ]
   },
@@ -94,7 +101,8 @@ const products = [
       { label: "Menthe au lait 1l", price: 1000 },
       { label: "Menthe au lait 1.5l  ", price: 1500 },
       { label: "Baobab au lait 0.5l", price: 700 },
-      { label: "Baobab au lait 1l", price: 2000 }
+      { label: "Baobab au lait 1l", price: 1400 },
+      { label: "Baobab au lait 1.5l", price: 2000 }
     ]
   },
   {
@@ -109,21 +117,8 @@ const products = [
       { label: "la gamelle avec les frites", price: 2000 }
     ]
   },
-   {
-    id: 18,
-    name: "Hamburger  ",
-    category: "Combo",
-    price: 600,
-    description: "Hamburger 600f unité Supplément frittes 500f",
-    images:  ["img/pane3.jpeg","img/pane4.jpeg","img/ham.jpeg"],
-    variations: [
-      { label: "Hamburger 600f unité", price: 600},
-      { label: "Hamburger 600f unité Supplément frittes 500f", price: 1100 },
-      { label: "Supplément frittes 500f", price: 500 }
-    ]
-  },
   {
-    id: 14,
+    id: 18,
     name: "plantain Burger",
     category: "Combo",
     price: 1000,
@@ -142,7 +137,7 @@ const products = [
     category: "crêpes",
     price: 1000,
     description: "10 crêpes nature 1000f ---10 crêpes au chocolat 1500f---- | ----10 crêpes au lait 1500f--- | ---10crepes marbré 1500f--- | ---supplement chocolat 300f--- | ---1crepes viande hachée fromage 500f--- |--- crepe pané 1000f _3 a 2500f--- | ---crepe poulet fromage 800f--- | ---crepe poulet fromage pané 1200f unité--- | #Les Délices de Barbie Bonne dégustation",
-    images:  ["img/crepa.jpeg", "img/crepa1.jpeg", "img/crepes.jpeg", "img/crepes choco1.jpeg", "img/crepes choco.jpeg","img/cr1.jpeg"],
+    images:  ["img/crep11.jpeg","img/crepa.jpeg", "img/crepa1.jpeg", "img/crepes.jpeg", "img/crepes choco1.jpeg", "img/crepes choco.jpeg","img/cr1.jpeg"],
     variations: [
       { label: "10 crêpes nature", price: 1000 },
       { label: "10 crêpes au chocolat ", price: 1500 },
@@ -151,7 +146,7 @@ const products = [
       { label: "1crepes viande hachée fromage ", price: 700 },
       { label: "crepe pané  ", price: 1000 },
       { label: "crepe pané x 3", price: 2800 },
-      { label: "supplement chocolat ", price: 300 },
+      { label: "supplement chocolat ", price: 500 },
       { label: "crepe poulet fromage ", price: 800 },
       { label: "crepe poulet fromage pané", price: 1200 }
     ]
@@ -192,7 +187,7 @@ const products = [
     ]
   },
   {
-    id: 10,
+    id: 32,
     name: " Boisson détox",
     category: "Boisson",
     price: 1000,
@@ -209,7 +204,7 @@ const products = [
   },
   
   {
-    id: 10,
+    id: 33,
     name: " Jus de fruits naturelles ",
     category: "Boisson",
     price: 1000,
@@ -223,8 +218,8 @@ const products = [
       { label: "Ananas gingembre 0.5l", price: 1000 },
       { label: "pasteque ananas 0.5l ", price: 1000 },
       { label: "mangue ananas  0.5l ", price: 1000 },
-      { label: "jus de corosol  0.5l", price: 1000 },
-      { label: "jus de corosol  1l", price: 2000 }
+      { label: "jus Ananas passion  0.5l", price: 1000 },
+      { label: "jus Ananas passion 1l", price: 2000 }
     ]
   },
   {
@@ -289,12 +284,27 @@ const products = [
     ]
   },
   {
+    id: 93,
+    name: "Street bread 🥖",
+    category: "patisséries",
+    price: 2500,
+    description: "Street bread 🥖- avec saucisse au poulet 2500f - sans saucisse 2000f  - supplément fromage 500 Panini(avec gâteau)- 1500f sans saucisse - 2000f avec saucisse",
+    images:  ["img/STREET.jpeg","img/street1.jpeg","img/street2.jpeg"],
+    variations: [
+      { label: "avec saucisse au poulet ", price: 2500 },
+      { label: "sans saucisse ", price: 2000 },
+      { label: "supplément fromage 500", price: 2500 },
+      { label: "Panini(avec gâteau) ", price: 1500 },
+      { label: "Panini(avec gâteau) avec saucisse ", price: 2000 },
+    ]
+  },
+  {
     id: 17,
     name: "poulet pané  ",
     category: "Combo",
     price: 3000,
     description: "Tarifs poulet pané 3 morceaux +frittes _3mil 5 morceaux+frittes _5000f 10morceaux + frittes _8000f Supplément frittes 500f",
-    images:  ["img/fffff.jpeg","img/pouletp.jpeg",],
+    images:  ["img/poulet pane.jpeg","img/pouletp.jpeg",],
     variations: [
       { label: "poulet pané 3 morceaux +frittes", price: 3000 },
       { label: "poulet pané 5 morceaux + frittes", price: 5000 },
@@ -435,7 +445,15 @@ const products = [
     images:  ["img/pack visite.jpeg","img/pack visite1.jpeg"],
   },
   {
-    id: 123,
+    id: 992,
+    name: "pack visité 2",
+    category: "Combo",
+    price: 8000,
+    description: "Pack visite 2 || 25pastels 20nems",
+    images:  ["img/vista.jpeg","img/vista1.jpeg"],
+  },
+  {
+    id: 124,
     name: "pack VIP  ",
     category: "Combo",
     price: 9000,
