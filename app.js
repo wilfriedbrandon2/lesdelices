@@ -38,7 +38,7 @@ const products = [
     category: "patisséries",
     price: 150,
     description: "Précuit 150f unité -Cuit 200f unité -Avec fromage 300f unite Schotteggs //Oeuf écossais  -200f unité  Les Délices de Barbie Bonne dégustation",
-    images: ["img/pastel121.jpeg","img/pastel122.jpeg","img/pili.jpeg", "img/pili2.jpeg", "img/pili4.jpeg","img/pili3.jpeg","img/pili1.jpeg"],
+    images: ["img/pili.jpeg", "img/pili2.jpeg", "img/pili4.jpeg","img/pili3.jpeg","img/pili1.jpeg"],
     variations: [
       { label: "Pastels Précuit ", price: 150 },
       { label: "Pastels Cuit  unité", price: 200 },
@@ -147,7 +147,7 @@ const products = [
       { label: "crepe pané  ", price: 1000 },
       { label: "crepe pané x 3", price: 2800 },
       { label: "supplement chocolat ", price: 500 },
-      { label: "crepe poulet fromage ", price: 800 },
+      { label: "crepe poulet fromage ", price: 700 },
       { label: "crepe poulet fromage pané", price: 1200 }
     ]
   },
