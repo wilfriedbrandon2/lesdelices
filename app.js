@@ -51,7 +51,7 @@ const products = [
     category: "Nems",
     price: 150,
     description: " Nems Précuit - Viande 125f - Poisson 125f- poulet 150f A partir de 50pieces 100f et 125f (poulet) Cuit - Viande et poisson 150f- Viande vermicelle 200f - poulet 200f",
-    images: ["img/tune.jpeg","img/nemss.jpeg"],
+    images: ["img/tune.jpeg","img/nempp.jpeg","img/nemss.jpeg"],
     variations: [
       { label: "Nems cuit poisson ", price: 150 },
       { label: "Nems cuit viande  ", price: 150 },
@@ -136,7 +136,7 @@ const products = [
     name: "Tarif crêpes",
     category: "crêpes",
     price: 1000,
-    description: "10 crêpes nature 1000f ---10 crêpes au chocolat 1500f---- | ----10 crêpes au lait 1500f--- | ---10crepes marbré 1500f--- | ---supplement chocolat 300f--- | ---1crepes viande hachée fromage 500f--- |--- crepe pané 1000f _3 a 2500f--- | ---crepe poulet fromage 800f--- | ---crepe poulet fromage pané 1200f unité--- | #Les Délices de Barbie Bonne dégustation",
+    description: "10 crêpes nature 1000f ---10 crêpes au chocolat 1500f---- | ----10 crêpes au lait 1500f--- | ---10crepes marbré 1500f--- | ---supplement chocolat 500f--- | ---1crepes viande hachée fromage 500f--- |--- crepe pané 1000f _3 a 2500f--- | ---crepe poulet fromage 800f--- | ---crepe poulet fromage pané 1200f unité--- | #Les Délices de Barbie Bonne dégustation",
     images:  ["img/crep11.jpeg","img/crepa.jpeg", "img/crepa1.jpeg", "img/crepes.jpeg", "img/crepes choco1.jpeg", "img/crepes choco.jpeg","img/cr1.jpeg"],
     variations: [
       { label: "10 crêpes nature", price: 1000 },
@@ -487,17 +487,6 @@ const products = [
     images: ["img/pack gold.jpeg","img/pack gold1.jpeg"],
   },
   {
-    id: 128,
-    name: "Pack festiv",
-    category: "combo",
-    price: 15000,
-    description: "Pack festiv 25mini burger 30nems 15mil",
-    images: ["img/festiv.jpeg", "img/festiv1.jpeg", "img/festiv2.jpeg", "img/festiv3.jpeg"],
-    variations: [
-      { label: "25 mini burger 30nems ", price: 15000 },
-    ]
-  },
-  {
     id: 12,
     name: " Pack anniversaire  ",
     category: "Combo",
@@ -512,6 +501,17 @@ const products = [
     price: 14500,
     description: "50crepes mix 1Gâteau marbré 6mini cakes 5l de menthe au lait Prix 14500f",
     images:  ["img/ps.jpeg","img/ps1.jpeg"],
+  },
+  {
+    id: 128,
+    name: "Pack festiv",
+    category: "combo",
+    price: 15000,
+    description: "Pack festiv 25mini burger 30nems 15mil",
+    images: ["img/festiv.jpeg", "img/festiv1.jpeg", "img/festiv2.jpeg", "img/festiv3.jpeg"],
+    variations: [
+      { label: "25 mini burger 30nems ", price: 15000 },
+    ]
   },
  
 ];
