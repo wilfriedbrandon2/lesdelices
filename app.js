@@ -51,7 +51,7 @@ const products = [
     category: "Nems",
     price: 150,
     description: " Nems Précuit - Viande 125f - Poisson 125f- poulet 150f A partir de 50pieces 100f et 125f (poulet) Cuit - Viande et poisson 150f- Viande vermicelle 200f - poulet 200f",
-    images: ["img/tune.jpeg","img/nempp.jpeg","img/nemss.jpeg"],
+    images: ["img/nema.jpeg","img/tune.jpeg","img/nempp.jpeg","img/nemss.jpeg"],
     variations: [
       { label: "Nems cuit poisson ", price: 150 },
       { label: "Nems cuit viande  ", price: 150 },
@@ -137,6 +137,18 @@ const products = [
       { label: "avec fromage", price: 1500 },
       { label: "sans fromage Supplément frittes de pommes", price: 1500 },
       { label: "Avec fromage Supplément frittes de pommes", price: 2000 }
+    ]
+  },
+  {
+    id: 42,
+    name: "Buens au plantain",
+    category: "Buens",
+    price: 1000,
+    description: "Buens au plantain Beignets plantain a la viande haché fromage  1 a 1000f 3 a 2500f ",
+    images:  ["img/Buens.jpeg","img/Buens1.jpeg","img/Buens3.jpeg","img/Buens2.jpeg",],
+    variations: [
+      { label: "Buens", price: 1000 },
+      { label: "3 X Buens", price: 2500 },
     ]
   },
   {
@@ -250,6 +262,21 @@ const products = [
     price: 2000,
     description: "Egg cheese burger ",
     images: ["img/egg cheese.jpeg"],
+  },
+   {
+    id: 48,
+    name: "Saucisse de porc grille ",
+    category: "Combo",
+    price: 2500,
+    description: "Saucisse de porc grille Tarif saucisse - 2gros avec fritte _2500f - 4 avec fritte _4000f - 6 avec fritte _6000f- 10 avec fritte _9000f- supplément fritte de pomme ou plantain _500f",
+    images:  ["img/sauscisse.jpeg","img/sauscisse1.jpeg","img/sauscisse2.jpeg"],
+    variations: [
+      { label: "saucisse - 2gros avec fritte", price: 2500},
+      { label: "saucisse - 4gros avec fritte", price: 4000},
+      { label: "saucisse - 6gros avec fritte", price: 6000},
+      { label: "saucisse - 10gros avec fritte", price: 9000},
+      { label: "supplément fritte de pomme ou plantain", price: 500}
+    ]
   },
    {
     id: 20,
@@ -501,6 +528,14 @@ const products = [
     price: 12000,
     description: "Pack anniversaire 1gateau au choix 20nems 30crepes nature et choco 10 Schott eggs 12mil",
     images:  ["img/pack-carton.jpeg"],
+  },
+  {
+    id: 49,
+    name: " Pack anniversaire-2 ",
+    category: "Combo",
+    price: 12000,
+    description: "Pack anniversaire-2 20mini burger 20pastels 20nems 20crepes 20Bouche plantain Prix 22mil",
+    images:  ["img/anniv2.jpeg","img/anniv21.jpeg","img/anniv22.jpeg"],
   },
   {
     id: 32,
