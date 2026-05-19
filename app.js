@@ -530,14 +530,6 @@ const products = [
     images:  ["img/pack-carton.jpeg"],
   },
   {
-    id: 49,
-    name: " Pack anniversaire-2 ",
-    category: "Combo",
-    price: 22000,
-    description: "Pack anniversaire-2 20mini burger 20pastels 20nems 20crepes 20Bouche plantain Prix 22mil",
-    images:  ["img/anniv2.jpeg","img/anniv21.jpeg","img/anniv22.jpeg"],
-  },
-  {
     id: 32,
     name: " Pack sucré  ",
     category: "Combo",
@@ -556,7 +548,14 @@ const products = [
       { label: "25 mini burger 30nems ", price: 15000 },
     ]
   },
- 
+ {
+    id: 49,
+    name: " Pack anniversaire-2 ",
+    category: "Combo",
+    price: 22000,
+    description: "Pack anniversaire-2 20mini burger 20pastels 20nems 20crepes 20Bouche plantain Prix 22mil",
+    images:  ["img/anniv2.jpeg","img/anniv21.jpeg","img/anniv22.jpeg"],
+  },
 ];
 
 let cart = [];
