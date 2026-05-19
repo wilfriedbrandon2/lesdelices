@@ -533,7 +533,7 @@ const products = [
     id: 49,
     name: " Pack anniversaire-2 ",
     category: "Combo",
-    price: 12000,
+    price: 22000,
     description: "Pack anniversaire-2 20mini burger 20pastels 20nems 20crepes 20Bouche plantain Prix 22mil",
     images:  ["img/anniv2.jpeg","img/anniv21.jpeg","img/anniv22.jpeg"],
   },
